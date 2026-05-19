@@ -11,6 +11,7 @@ import YoutubeSection from '@/components/sections/YoutubeSection';
 import SoftwareSection from '@/components/sections/SoftwareSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import PricingSection from '@/components/sections/PricingSection';
+import FAQSection from '@/components/sections/FAQSection';
 
 const Home: NextPage = () => {
   return (
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
         <ProductsSection />
         <YoutubeSection />
         <SoftwareSection />
+        <FAQSection />
       </main>
       <Footer />
     </>

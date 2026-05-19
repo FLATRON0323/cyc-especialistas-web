@@ -1,10 +1,12 @@
 "use client";
-import { Cpu, HardDrive, ShoppingCart } from "lucide-react";
+import { ShoppingCart, HardDrive, Cpu, Printer, Database } from "lucide-react";
+import Image from "next/image";
+import { SITE_CONFIG } from "@/config/site";
 import { motion } from "framer-motion";
 
 export default function ProductsSection() {
   const products = [
-    { title: "Tintas y Tóner", img: "https://images.unsplash.com/photo-1623812555513-aa2d4d9b62f7?auto=format&fit=crop&w=400&q=80", msg: "Cotizar tintas o toner", type: "img" },
+    { title: "Tintas y Tóner", img: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=400&q=80", msg: "Cotizar tintas o toner", type: "img" },
     { title: "Discos Duros y SSD", icon: <HardDrive size={80} className="text-brand-blue opacity-50" />, msg: "Cotizar disco SSD o HDD", type: "icon" },
     { title: "Memorias RAM", icon: <Cpu size={80} className="text-brand-blue opacity-50" />, msg: "Cotizar memoria RAM", type: "icon" },
     { title: "Pantallas y Teclados", icon: <ShoppingCart size={80} className="text-brand-blue opacity-50" />, msg: "Cotizar pantallas y teclados", type: "icon" },
@@ -37,7 +39,15 @@ export default function ProductsSection() {
             >
               <div className="bg-gray-50 rounded-2xl aspect-square mb-6 flex items-center justify-center p-6 overflow-hidden">
                 {prod.type === "img" ? (
-                  <img src={prod.img} alt={prod.title} className="object-contain h-full mix-blend-multiply transform group-hover:scale-110 transition-transform duration-500" />
+                  <div className="relative w-full h-full">
+                    <Image 
+                      src={prod.img || ""} 
+                      alt={prod.title} 
+                      fill 
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-contain mix-blend-multiply transform group-hover:scale-110 transition-transform duration-500" 
+                    />
+                  </div>
                 ) : (
                   <div className="transform group-hover:scale-110 transition-transform duration-500 group-hover:text-brand-blue">
                     {prod.icon}
@@ -47,7 +57,7 @@ export default function ProductsSection() {
               <div className="flex-grow">
                 <h3 className="font-extrabold text-slate-800 text-lg leading-snug">{prod.title}</h3>
               </div>
-              <a href={`https://wa.me/573054568996?text=${encodeURIComponent(prod.msg)}`} className="w-full mt-6 bg-slate-50 border-2 border-brand-blue/20 text-brand-blue font-bold py-3.5 rounded-xl text-center flex justify-center items-center gap-2 hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all uppercase tracking-wider text-xs">
+              <a href={`${SITE_CONFIG.whatsappBaseUrl}?text=${encodeURIComponent(prod.msg)}`} className="w-full mt-6 bg-slate-50 border-2 border-brand-blue/20 text-brand-blue font-bold py-3.5 rounded-xl text-center flex justify-center items-center gap-2 hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all uppercase tracking-wider text-xs">
                 <ShoppingCart size={16} /> Cotizar Stock
               </a>
             </div>

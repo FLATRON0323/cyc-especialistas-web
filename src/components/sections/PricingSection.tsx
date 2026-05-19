@@ -1,12 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import { CheckCircle2, MessageCircle } from "lucide-react";
+import { SITE_CONFIG } from "@/config/site";
 
 export default function PricingSection() {
   const prices = [
     { service: "Revisión y Diagnóstico en Local", price: "$40.000", action: "Agendar revisión" },
     { service: "Mantenimiento Preventivo", price: "Cotizar por WhatsApp", action: "Cotizar preventivo" },
-    { خدمت: "Formateo e Instalación de SO", price: "Cotizar por WhatsApp", action: "Cotizar formateo" },
+    { service: "Formateo e Instalación de SO", price: "Cotizar por WhatsApp", action: "Cotizar formateo" },
     { service: "Upgrade de Disco Duro a SSD", price: "Cotizar por WhatsApp", action: "Cotizar SSD" },
     { service: "Servicio a Domicilio", price: "Cotizar por WhatsApp", action: "Solicitar visita" },
   ];
@@ -56,14 +57,14 @@ export default function PricingSection() {
                     {prices.map((item, idx) => (
                       <tr key={idx} className="border-b border-slate-100 hover:bg-white transition-colors">
                         <td className="py-5 px-4 font-bold text-slate-800 text-sm md:text-base">
-                          {item.service || item.خدمت}
+                          {item.service}
                         </td>
                         <td className="py-5 px-4 font-extrabold text-brand-blue border-l border-slate-100 whitespace-nowrap">
                           {item.price}
                         </td>
                         <td className="py-5 px-4 border-l border-slate-100 text-center">
                           <a 
-                            href={`https://wa.me/573054568996?text=Hola,%20quisiera%20${item.action.toLowerCase()}`}
+                            href={`${SITE_CONFIG.whatsappBaseUrl}?text=Hola,%20quisiera%20${item.action.toLowerCase()}`}
                             className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-whatsapp/10 text-whatsapp hover:bg-whatsapp hover:text-white transition-colors mx-auto"
                             title={item.action}
                           >

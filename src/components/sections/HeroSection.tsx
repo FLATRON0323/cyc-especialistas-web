@@ -1,9 +1,16 @@
 "use client";
-import { CheckCircle2, Calendar, Search, Play, ShieldCheck, TrendingUp, PlayCircle, MapPin } from "lucide-react";
+import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { CheckCircle2, Calendar, Search, Play, ShieldCheck, TrendingUp, PlayCircle, MapPin } from "lucide-react";
+import { SITE_CONFIG } from "@/config/site";
+import VideoModal from "@/components/ui/VideoModal";
 
 export default function HeroSection() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  
   return (
+    <>
     <section className="relative bg-white pt-12 pb-24 overflow-hidden border-b border-gray-100">
       {/* Background accents (Dynamic glow) */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl mix-blend-multiply opacity-60 animate-glow"></div>
@@ -21,7 +28,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 z-10"></div>
             <div className="flex -space-x-2">
               {[1, 2, 3].map(i => (
-                <img key={i} className="w-6 h-6 rounded-full border-2 border-white relative z-0" src={`https://i.pravatar.cc/100?img=${i}`} alt="Cliente" />
+                <Image key={i} className="w-6 h-6 rounded-full border-2 border-white relative z-0" src={`https://i.pravatar.cc/100?img=${i}`} alt="Cliente" width={24} height={24} />
               ))}
             </div>
             <span className="text-xs sm:text-sm font-medium text-gray-700">⭐ Más de <strong className="text-brand-blue">46.000 clientes</strong> confían en nosotros</span>
@@ -76,7 +83,7 @@ export default function HeroSection() {
             transition={{ delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <a href="https://wa.me/573054568996" className="bg-brand-dark text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-2xl shadow-brand-dark/20 hover:bg-black hover:scale-105 transition-all overflow-hidden relative group">
+            <a href={`${SITE_CONFIG.whatsappBaseUrl}`} className="bg-brand-dark text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-2xl shadow-brand-dark/20 hover:bg-black hover:scale-105 transition-all overflow-hidden relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-purple-500 to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <Calendar className="relative z-10 group-hover:animate-bounce" /> 
               <span className="relative z-10">Agendar Diagnóstico</span>
@@ -97,16 +104,26 @@ export default function HeroSection() {
           <div className="relative z-10 w-full max-w-md lg:max-w-lg">
             
             <div className="rounded-3xl shadow-2xl overflow-hidden border-8 border-white relative bg-gray-100 group">
-              <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=800&q=80" alt="Mantenimiento de Impresoras" className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+              <Image 
+                src="https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=800&q=80" 
+                alt="Mantenimiento de Impresoras" 
+                width={800} 
+                height={600} 
+                priority
+                className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
+              />
               
               {/* Play button overlay (simulating video popup) */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent flex items-center justify-center cursor-pointer transition-all">
+              <div 
+                onClick={() => setIsVideoOpen(true)}
+                className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent flex items-center justify-center cursor-pointer transition-all"
+              >
                 <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center text-brand-blue shadow-2xl hover:scale-110 transition-transform backdrop-blur-sm group-hover:bg-brand-blue group-hover:text-white">
                   <Play size={32} className="ml-2" />
                 </div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-white font-bold text-lg drop-shadow-md flex items-center justify-between">
-                    Ver caso de éxito (1 min) <TrendingUp className="text-brand-accent" />
+                    Ver video de la empresa <TrendingUp className="text-brand-accent" />
                   </p>
                 </div>
               </div>
@@ -130,6 +147,7 @@ export default function HeroSection() {
         </motion.div>
       </div>
     </section>
+    <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} videoUrl={SITE_CONFIG.videoDemoUrl} />
+    </>
   );
 }
-

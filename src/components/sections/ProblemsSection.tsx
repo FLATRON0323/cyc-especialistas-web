@@ -1,6 +1,7 @@
 "use client";
 import { Droplet, AlertTriangle, PowerOff, Hourglass, Network, ArrowRight, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { SITE_CONFIG } from "@/config/site";
 
 const problems = [
   {
@@ -74,7 +75,7 @@ export default function ProblemsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              href={`https://wa.me/573054568996?text=${encodeURIComponent(prob.msg)}`}
+              href={`${SITE_CONFIG.whatsappBaseUrl}?text=${encodeURIComponent(prob.msg)}`}
               className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-brand-accent hover:bg-slate-800 transition-all group relative overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/10"
             >
               <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${prob.color} opacity-0 group-hover:opacity-100 transition-opacity`}></div>
@@ -105,7 +106,7 @@ export default function ProblemsSection() {
             </div>
             <h3 className="text-2xl font-bold mb-2 text-white">¿Otro síntoma?</h3>
             <p className="text-blue-100 mb-8 text-sm font-medium">Descríbelo detalladamente y un técnico real te evaluará.</p>
-            <a href="https://wa.me/573054568996" className="bg-white text-brand-blue px-6 py-4 rounded-xl font-extrabold shadow-xl hover:scale-105 transition-transform w-full uppercase tracking-wide">
+            <a href={SITE_CONFIG.whatsappBaseUrl} className="bg-white text-brand-blue px-6 py-4 rounded-xl font-extrabold shadow-xl hover:scale-105 transition-transform w-full uppercase tracking-wide">
               Hablar con Soporte
             </a>
           </motion.div>

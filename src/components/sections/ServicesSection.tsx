@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Printer, Monitor, ShieldCheck, Cpu, ArrowRight, Laptop, Globe, HardDrive } from "lucide-react";
+import { SITE_CONFIG } from "@/config/site";
 
 export default function ServicesSection() {
   const categories = [
@@ -105,7 +106,7 @@ export default function ServicesSection() {
                   ))}
                 </ul>
                 <a 
-                  href={`https://wa.me/573054568996?text=Hola,%20me%20interesan%20los%20${category.title}`} 
+                  href={`${SITE_CONFIG.whatsappBaseUrl}?text=Hola,%20me%20interesan%20los%20${category.title}`} 
                   className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between text-brand-blue font-bold uppercase tracking-wider text-sm hover:text-blue-800 transition-colors group"
                 >
                   Solicitar Soporte

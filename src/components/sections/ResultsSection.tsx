@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 export default function ResultsSection() {
   return (
@@ -19,8 +20,14 @@ export default function ResultsSection() {
             viewport={{ once: true }}
             className="bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 flex flex-col md:flex-row shadow-lg hover:shadow-2xl transition-all duration-500 group"
           >
-            <div className="md:w-1/2 relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80" alt="Reparación Impresora Epson" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+            <div className="md:w-1/2 relative overflow-hidden min-h-[240px]">
+              <Image 
+                src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80" 
+                alt="Reparación Impresora Epson" 
+                fill 
+                sizes="(max-width: 768px) 100vw, 25vw"
+                className="object-cover transform group-hover:scale-110 transition-transform duration-700" 
+              />
               <div className="absolute top-4 left-4 bg-red-500/90 backdrop-blur-sm text-white text-xs font-black px-3 py-1.5 rounded uppercase shadow-lg tracking-wider border border-red-400">Antes: Inservible</div>
               <div className="absolute bottom-4 right-4 bg-green-500/90 backdrop-blur-sm text-white text-xs font-black px-3 py-1.5 rounded uppercase shadow-lg tracking-wider border border-green-400">Despues: 100% Viva</div>
             </div>
@@ -47,8 +54,14 @@ export default function ResultsSection() {
             viewport={{ once: true }}
             className="bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 flex flex-col md:flex-row shadow-lg hover:shadow-2xl transition-all duration-500 group"
           >
-            <div className="md:w-1/2 relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80" alt="Mantenimiento Computador Lento" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+            <div className="md:w-1/2 relative overflow-hidden min-h-[240px]">
+              <Image 
+                src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80" 
+                alt="Mantenimiento Computador Lento" 
+                fill 
+                sizes="(max-width: 768px) 100vw, 25vw"
+                className="object-cover transform group-hover:scale-110 transition-transform duration-700" 
+              />
               <div className="absolute top-4 left-4 bg-red-500/90 backdrop-blur-sm text-white text-xs font-black px-3 py-1.5 rounded uppercase shadow-lg tracking-wider border border-red-400">Antes: Lentitud Extrema</div>
               <div className="absolute bottom-4 right-4 bg-green-500/90 backdrop-blur-sm text-white text-xs font-black px-3 py-1.5 rounded uppercase shadow-lg tracking-wider border border-green-400">Despues: Veloz (x10)</div>
             </div>

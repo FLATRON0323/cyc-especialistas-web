@@ -16,6 +16,7 @@ const config: Config = {
           accent: "#FFD600",
           whatsapp: "#25D366",
         },
+        whatsapp: "#25D366",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

@@ -1,8 +1,14 @@
 "use client";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { CheckCircle2, ArrowRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { SITE_CONFIG } from "@/config/site";
+import VideoModal from "@/components/ui/VideoModal";
 
 export default function SoftwareSection() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <section id="software" className="py-32 bg-brand-dark relative overflow-hidden">
       {/* Dynamic Backgrounds */}
@@ -40,7 +46,7 @@ export default function SoftwareSection() {
               transition={{ delay: 0.2 }}
               className="mt-8 text-white/80 text-lg sm:text-xl leading-relaxed"
             >
-              Software SaaS inteligente. Inventarios, facturación, y <b>gestión automática de tickets técnicos</b> para escalar tu negocio sin caos.
+              Software SaaS inteligente diseñado especialmente para <b>talleres de celulares, computadores y equipos electrónicos</b>. Gestiona inventarios, facturación y <b>tickets de servicio automático</b> para escalar tu negocio sin caos.
             </motion.p>
             
             <motion.ul 
@@ -62,9 +68,12 @@ export default function SoftwareSection() {
               transition={{ delay: 0.4 }}
               className="mt-12 flex"
             >
-              <button className="bg-gradient-to-r from-brand-accent to-yellow-400 text-slate-900 px-8 py-5 rounded-2xl font-black text-lg hover:shadow-[0_0_30px_rgba(255,214,0,0.6)] hover:-translate-y-1 transition-all flex items-center gap-3 w-full sm:w-auto justify-center group uppercase tracking-wider">
-                Solicitar Demo <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-              </button>
+              <a 
+                href={`${SITE_CONFIG.whatsappBaseUrl}?text=Hola,%20deseo%20solicitar%20información%20sobre%20el%20software%20para%20talleres.`}
+                className="bg-gradient-to-r from-brand-accent to-yellow-400 text-slate-900 px-8 py-5 rounded-2xl font-black text-lg hover:shadow-[0_0_30px_rgba(255,214,0,0.6)] hover:-translate-y-1 transition-all flex items-center gap-3 w-full sm:w-auto justify-center group uppercase tracking-wider text-center"
+              >
+                Solicitar información sobre el software para talleres <ArrowRight className="group-hover:translate-x-1 transition-transform flex-shrink-0" size={20} />
+              </a>
             </motion.div>
           </div>
 
@@ -84,14 +93,29 @@ export default function SoftwareSection() {
                 <div className="w-3.5 h-3.5 rounded-full bg-emerald-500 shadow-lg shadow-emerald-500/50"></div>
                 <div className="ml-4 flex-grow bg-slate-800 h-6 rounded-md opacity-50"></div>
               </div>
-              <div className="px-2">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Dashboard Software" className="rounded-xl border border-slate-700 w-full object-cover h-[350px] opacity-90 group-hover:opacity-100 transition-opacity" />
+              <div 
+                onClick={() => setIsVideoOpen(true)}
+                className="px-2 relative w-full h-[350px] cursor-pointer group/video"
+              >
+                <Image 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" 
+                  alt="Dashboard Software" 
+                  fill 
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="rounded-xl border border-slate-700 object-cover opacity-60 group-hover:opacity-80 transition-opacity" 
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/10 transition-colors rounded-xl mx-2">
+                  <div className="w-20 h-20 bg-brand-accent/90 rounded-full flex items-center justify-center text-slate-900 shadow-2xl hover:scale-110 transition-transform duration-300">
+                    <Play className="ml-1" size={32} fill="currentColor" />
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
 
         </div>
       </div>
+      <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} videoUrl="https://www.youtube.com/embed/RfScIWMNDn4?autoplay=1" />
     </section>
   );
 }
