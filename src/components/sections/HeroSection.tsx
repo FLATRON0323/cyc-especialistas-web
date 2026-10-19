@@ -105,26 +105,39 @@ export default function HeroSection() {
             
             <div className="rounded-3xl shadow-2xl overflow-hidden border-8 border-white relative bg-gray-100 group">
               <Image 
-                src="https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=800&q=80" 
-                alt="Mantenimiento de Impresoras" 
+                src="/hero-tecnico-reparacion.jpg" 
+                alt="Técnico Especialista Reparando Impresora en Taller C&C" 
                 width={800} 
                 height={600} 
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
+                className="w-full object-cover transform group-hover:scale-105 transition-transform duration-700 aspect-[4/3]" 
               />
+
+              {/* Top Badge */}
+              <div className="absolute top-4 left-4 bg-slate-900/85 backdrop-blur-md text-white text-xs font-bold px-3.5 py-1.5 rounded-full flex items-center gap-2 border border-white/20 z-10 shadow-lg pointer-events-none">
+                <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                <span>Laboratorio Técnico Especializado</span>
+              </div>
               
-              {/* Play button overlay (simulating video popup) */}
+              {/* Play button overlay */}
               <div 
                 onClick={() => setIsVideoOpen(true)}
-                className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent flex items-center justify-center cursor-pointer transition-all"
+                className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent flex items-center justify-center cursor-pointer transition-all z-10"
               >
-                <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center text-brand-blue shadow-2xl hover:scale-110 transition-transform backdrop-blur-sm group-hover:bg-brand-blue group-hover:text-white">
-                  <Play size={32} className="ml-2" />
+                <div className="relative">
+                  <div className="absolute -inset-3 bg-brand-blue/30 rounded-full blur-md animate-pulse"></div>
+                  <div className="relative w-20 h-20 bg-white/95 rounded-full flex items-center justify-center text-brand-blue shadow-2xl hover:scale-110 transition-transform backdrop-blur-sm group-hover:bg-brand-blue group-hover:text-white">
+                    <Play size={32} className="ml-1" />
+                  </div>
                 </div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-white font-bold text-lg drop-shadow-md flex items-center justify-between">
-                    Ver video de la empresa <TrendingUp className="text-brand-accent" />
+                
+                <div className="absolute bottom-5 left-6 right-6">
+                  <p className="text-white font-extrabold text-base sm:text-lg drop-shadow-md flex items-center justify-between gap-2">
+                    <span>Conoce nuestro taller y diagnóstico</span>
+                    <span className="text-[11px] bg-brand-accent text-slate-950 font-black px-2.5 py-1 rounded uppercase tracking-wider shrink-0 flex items-center gap-1 shadow">
+                      Ver Video <TrendingUp size={13} />
+                    </span>
                   </p>
                 </div>
               </div>
