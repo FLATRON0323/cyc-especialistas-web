@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { MessageCircle, Menu, X, MapPin, Clock, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SITE_CONFIG } from "@/config/site";
@@ -42,15 +43,26 @@ export default function Navbar() {
         <div className="container mx-auto px-6 flex justify-between items-center">
           
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <a href="#" className="flex items-center justify-center relative group w-[70px] h-[70px] sm:w-[100px] sm:h-[100px]">
-              <Image src="/logo.png" alt="C&C Logo" fill priority sizes="(max-width: 768px) 70px, 100px" className="object-contain transform group-hover:scale-105 transition-transform duration-300 drop-shadow-md" />
-            </a>
-            <div className="hidden sm:block">
-              <span className="font-bold text-xl tracking-tight text-slate-900 block leading-none">C&amp;C Especialistas</span>
-              <span className="text-[0.65rem] uppercase font-black tracking-[0.2em] text-brand-blue">En Impresión y Computadores</span>
+          <Link href="/" className="flex items-center gap-3 group py-1">
+            <div className="relative w-12 h-10 sm:w-16 sm:h-12 flex-shrink-0">
+              <Image 
+                src="/logo.png" 
+                alt="C&C Especialistas en Impresión y Computadores" 
+                fill 
+                priority 
+                sizes="(max-width: 768px) 48px, 64px" 
+                className="object-contain transform group-hover:scale-105 transition-transform duration-300" 
+              />
             </div>
-          </div>
+            <div className="flex flex-col justify-center">
+              <span className="font-extrabold text-base sm:text-xl tracking-tight text-slate-900 leading-none group-hover:text-brand-blue transition-colors">
+                C&amp;C Especialistas
+              </span>
+              <span className="text-[0.6rem] sm:text-[0.7rem] uppercase font-bold tracking-[0.16em] text-brand-blue mt-1 leading-none">
+                En Impresión y Computadores
+              </span>
+            </div>
+          </Link>
 
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-8 font-semibold text-sm text-gray-600">
