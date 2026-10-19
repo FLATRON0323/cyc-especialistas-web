@@ -42,12 +42,12 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-black mb-8 text-sm uppercase tracking-widest">Horarios y Ubicación</h4>
             <ul className="space-y-4 text-sm font-medium mb-6">
-              <li className="flex items-center justify-between border-b border-slate-700 pb-2"><span>Lunes - Viernes:</span> <strong className="text-white">8:00 am - 8:00 pm</strong></li>
-              <li className="flex items-center justify-between border-b border-slate-700 pb-2"><span>Sábados:</span> <strong className="text-white">9:00 am - 9:00 pm</strong></li>
-              <li className="flex items-center justify-between pb-2"><span>Domingos:</span> <strong className="text-white">12:00 pm - 5:00 pm</strong></li>
+              <li className="flex items-center justify-between border-b border-slate-700 pb-2"><span>Lunes - Viernes:</span> <strong className="text-white">08:00 – 18:00</strong></li>
+              <li className="flex items-center justify-between border-b border-slate-700 pb-2"><span>Sábados:</span> <strong className="text-white">08:00 – 14:00</strong></li>
+              <li className="flex items-center justify-between pb-2"><span>Domingos:</span> <strong className="text-white">09:00 – 14:00</strong></li>
             </ul>
-            <p className="text-xs text-slate-400 mb-2">Cobertura en área metropolitana:</p>
-            <p className="text-xs text-brand-accent font-bold uppercase tracking-wider">El Poblado • Laureles • Envigado • Sabaneta • Bello • Itagüí</p>
+            <p className="text-xs text-slate-400 mb-2">Cobertura principal:</p>
+            <p className="text-xs text-brand-accent font-bold uppercase tracking-wider">Medellín • Bello • Envigado • Itagüí • Sabaneta • Copacabana</p>
           </div>
 
           {/* Legal / Trust */}
@@ -56,7 +56,7 @@ export default function Footer() {
             <ul className="space-y-6 text-sm">
               <li className="flex items-start gap-4 bg-slate-800/50 p-4 rounded-xl">
                 <MapPin className="text-brand-accent flex-shrink-0" size={24} />
-                <span><b className="text-white block mb-1">Medellín, Antioquia</b>Recibimos equipos de toda Colombia.</span>
+                <span><b className="text-white block mb-1">Taller Principal:</b>Cl. 102 #49C-53 Int. 301, Santa Cruz, Medellín.</span>
               </li>
               <li className="flex items-center gap-4 border border-slate-800 p-4 rounded-xl">
                 <Phone className="text-brand-whatsapp flex-shrink-0" size={20} />

@@ -22,10 +22,10 @@ export default function Navbar() {
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
-              <MapPin size={14} className="text-brand-accent" /> Medellín, Colombia (Atención Nacional)
+              <MapPin size={14} className="text-brand-accent" /> Cl. 102 #49C-53 Int. 301, Santa Cruz, Medellín
             </span>
             <span className="flex items-center gap-2">
-              <Clock size={14} className="text-brand-accent" /> Lunes a Sábado - Horario de Oficina
+              <Clock size={14} className="text-brand-accent" /> {SITE_CONFIG.schedule.display}
             </span>
           </div>
           <div className="flex items-center gap-4">
@@ -47,8 +47,8 @@ export default function Navbar() {
               <Image src="/logo.png" alt="C&C Logo" fill sizes="(max-width: 768px) 70px, 100px" className="object-contain transform group-hover:scale-105 transition-transform duration-300 drop-shadow-md" />
             </a>
             <div className="hidden sm:block">
-              <span className="font-bold text-xl tracking-tight text-slate-900 block leading-none">Especialistas</span>
-              <span className="text-[0.65rem] uppercase font-black tracking-[0.2em] text-brand-blue">En Impresoras</span>
+              <span className="font-bold text-xl tracking-tight text-slate-900 block leading-none">C&amp;C Especialistas</span>
+              <span className="text-[0.65rem] uppercase font-black tracking-[0.2em] text-brand-blue">En Impresión y Cómputo</span>
             </div>
           </div>
 
