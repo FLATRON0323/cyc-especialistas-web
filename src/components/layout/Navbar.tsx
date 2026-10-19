@@ -44,7 +44,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <a href="#" className="flex items-center justify-center relative group w-[70px] h-[70px] sm:w-[100px] sm:h-[100px]">
-              <Image src="/logo.png" alt="C&C Logo" fill sizes="(max-width: 768px) 70px, 100px" className="object-contain transform group-hover:scale-105 transition-transform duration-300 drop-shadow-md" />
+              <Image src="/logo.png" alt="C&C Logo" fill priority sizes="(max-width: 768px) 70px, 100px" className="object-contain transform group-hover:scale-105 transition-transform duration-300 drop-shadow-md" />
             </a>
             <div className="hidden sm:block">
               <span className="font-bold text-xl tracking-tight text-slate-900 block leading-none">C&amp;C Especialistas</span>

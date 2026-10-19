@@ -1,4 +1,3 @@
-"use client";
 import { MapPin, CheckCircle, ShieldCheck, Phone, Wrench, ArrowRight } from "lucide-react";
 import { SITE_CONFIG } from "@/config/site";
 import Link from "next/link";

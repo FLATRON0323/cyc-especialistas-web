@@ -1,18 +1,11 @@
-"use client";
-import { useState } from "react";
-import { CheckCircle2, ArrowRight, Play, Sparkles, Layers, Cpu } from "lucide-react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { CheckCircle2, ArrowRight, Sparkles, Layers, Cpu } from "lucide-react";
 import { SITE_CONFIG } from "@/config/site";
-import VideoModal from "@/components/ui/VideoModal";
 
 export default function SoftwareSection() {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-
   return (
     <section id="software" className="py-28 bg-brand-dark relative overflow-hidden">
       {/* Background Glows */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/connected.png')] opacity-5 mix-blend-screen"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-bl from-brand-blue/20 via-transparent to-transparent opacity-80 z-0"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-brand-accent/10 via-transparent to-transparent opacity-60 z-0 blur-3xl rounded-full"></div>
       
@@ -149,7 +142,6 @@ export default function SoftwareSection() {
         </div>
 
       </div>
-      <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} videoUrl="https://www.youtube.com/embed/RfScIWMNDn4?autoplay=1" />
     </section>
   );
 }

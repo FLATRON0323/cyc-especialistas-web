@@ -1,5 +1,3 @@
-"use client";
-import { motion } from "framer-motion";
 import { MessageSquare, PackageOpen, Wrench, FileSearch, Banknote, ShieldCheck } from "lucide-react";
 
 export default function WorkProcessSection() {
@@ -25,12 +23,8 @@ export default function WorkProcessSection() {
           <div className="hidden lg:block absolute top-[44px] left-[10%] w-[80%] h-[2px] bg-gradient-to-r from-brand-blue/20 via-brand-blue/50 to-brand-whatsapp/50 z-0"></div>
           
           {steps.map((step, idx) => (
-            <motion.div 
+            <div 
               key={idx}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.15, type: "spring", stiffness: 100 }}
               className="flex flex-col items-center text-center relative z-10 group"
             >
               <div className={`w-20 h-20 rounded-2xl flex flex-col items-center justify-center font-bold text-xl shadow-xl transition-all duration-300 mb-6
@@ -42,7 +36,7 @@ export default function WorkProcessSection() {
               </div>
               <h4 className="font-extrabold text-base mb-2 text-slate-800 uppercase tracking-wide">{step.title}</h4>
               <p className="text-sm text-gray-500 hidden md:block leading-relaxed max-w-[150px]">{step.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

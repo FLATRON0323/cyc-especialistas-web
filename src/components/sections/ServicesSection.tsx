@@ -1,5 +1,3 @@
-"use client";
-import { motion } from "framer-motion";
 import { Printer, Monitor, ShieldCheck, Cpu, ArrowRight, Laptop, Globe, HardDrive } from "lucide-react";
 import { SITE_CONFIG } from "@/config/site";
 
@@ -68,14 +66,9 @@ export default function ServicesSection() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-brand-blue font-black tracking-widest text-sm uppercase bg-blue-100 px-4 py-1 rounded-full">Nuestro Potencial</span>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-extrabold text-slate-900 mt-6 tracking-tight mb-6"
-          >
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mt-6 tracking-tight mb-6">
             Soporte integral para <span className="text-brand-blue">tu ecosistema tecnológico</span>
-          </motion.h2>
+          </h2>
           <p className="text-lg text-slate-600 font-medium">Abordamos todas las áreas críticas para garantizar que las empresas, negocios y hogares nunca detengan sus operaciones comerciales.</p>
         </div>
 

@@ -1,7 +1,6 @@
 "use client";
 import { Quote, Star } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function TestimonialSection() {
   const testimonials = [
@@ -51,8 +50,14 @@ export default function TestimonialSection() {
             >
               <Quote className="text-slate-700/50 absolute top-8 right-8 rotate-180 transition-transform group-hover:-rotate-12" size={60} />
               <div className="flex items-center gap-4 mb-8">
-                <div className="relative w-16 h-16">
-                  <Image src={`https://i.pravatar.cc/150?img=${test.img}`} alt={test.name} width={64} height={64} className="rounded-full border-4 border-brand-blue/30 object-cover" />
+                <div className="relative w-16 h-16 shrink-0">
+                  <div className={`w-16 h-16 rounded-full border-4 border-brand-blue/30 flex items-center justify-center font-black text-xl text-white shadow-inner ${
+                    idx === 0 ? "bg-gradient-to-tr from-blue-600 to-indigo-700" :
+                    idx === 1 ? "bg-gradient-to-tr from-purple-600 to-pink-600" :
+                    "bg-gradient-to-tr from-emerald-600 to-teal-700"
+                  }`}>
+                    {test.name.split(" ").map(n => n[0]).join("")}
+                  </div>
                   <div className="absolute -bottom-1 -right-1 bg-brand-accent text-slate-900 rounded-full w-6 h-6 flex items-center justify-center shadow">
                     <Star size={12} fill="currentColor" />
                   </div>

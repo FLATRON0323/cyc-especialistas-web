@@ -1,5 +1,3 @@
-"use client";
-import { motion } from "framer-motion";
 import { CheckCircle2, MessageCircle } from "lucide-react";
 import { SITE_CONFIG } from "@/config/site";
 
@@ -17,12 +15,7 @@ export default function PricingSection() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="lg:w-5/12"
-          >
+          <div className="lg:w-5/12">
             <span className="text-brand-blue font-black tracking-widest text-sm uppercase bg-blue-100 px-4 py-1 rounded-full">Transparencia Total</span>
             <h2 className="text-3xl lg:text-5xl font-extrabold text-slate-900 mt-6 tracking-tight leading-tight">
               Precios claros y honestidad <span className="text-brand-blue">brutal</span>
@@ -35,14 +28,9 @@ export default function PricingSection() {
               <li className="flex items-center gap-3 text-slate-700 font-bold"><CheckCircle2 className="text-green-500" /> Repuestos 100% originales</li>
               <li className="flex items-center gap-3 text-slate-700 font-bold"><CheckCircle2 className="text-green-500" /> Sin precios ocultos ni recargos sorpresa</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="lg:w-7/12 w-full"
-          >
+          <div className="lg:w-7/12 w-full">
             <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 shadow-2xl relative">
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
@@ -80,7 +68,7 @@ export default function PricingSection() {
                 * Los precios son una guía base y no incluyen el costo de repuestos adicionales de hardware. ¡Cotiza gratis por WhatsApp para un precio exacto para tu modelo!
               </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

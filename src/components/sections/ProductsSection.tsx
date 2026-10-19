@@ -1,8 +1,6 @@
-"use client";
 import { ShoppingCart, HardDrive, Cpu, Printer, Database } from "lucide-react";
 import Image from "next/image";
 import { SITE_CONFIG } from "@/config/site";
-import { motion } from "framer-motion";
 
 export default function ProductsSection() {
   const products = [

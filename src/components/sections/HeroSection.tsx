@@ -27,9 +27,9 @@ export default function HeroSection() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 z-10"></div>
             <div className="flex -space-x-2">
-              {[1, 2, 3].map(i => (
-                <Image key={i} className="w-6 h-6 rounded-full border-2 border-white relative z-0" src={`https://i.pravatar.cc/100?img=${i}`} alt="Cliente" width={24} height={24} />
-              ))}
+              <span className="w-6 h-6 rounded-full border-2 border-white bg-blue-600 text-white font-bold text-[9px] flex items-center justify-center shadow-sm">CR</span>
+              <span className="w-6 h-6 rounded-full border-2 border-white bg-purple-600 text-white font-bold text-[9px] flex items-center justify-center shadow-sm">AR</span>
+              <span className="w-6 h-6 rounded-full border-2 border-white bg-emerald-600 text-white font-bold text-[9px] flex items-center justify-center shadow-sm">FT</span>
             </div>
             <span className="text-xs sm:text-sm font-medium text-gray-700">⭐ Más de <strong className="text-brand-blue">+54.500 suscriptores en YouTube</strong> confían en nosotros</span>
           </motion.div>
@@ -110,6 +110,7 @@ export default function HeroSection() {
                 width={800} 
                 height={600} 
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
               />
               
