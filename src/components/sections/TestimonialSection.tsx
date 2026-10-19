@@ -7,21 +7,21 @@ export default function TestimonialSection() {
   const testimonials = [
     {
       name: "Carlos Ruiz",
-      role: "Gerente Logística",
+      role: "Gerente Logística (Medellín - El Poblado)",
       img: "11",
-      text: "Recuperaron nuestra impresora matriz de facturación en tiempo récord. Sufríamos constantes apagones, nos diagnosticaron rápido y desde hace 6 meses no ha vuelto a fallar. Totalmente recomendados."
+      text: "Recuperaron nuestras impresoras Epson EcoTank y computadores de facturación en tiempo récord. Sufríamos constantes atascos de papel y bloqueo de almohadillas. Diagnóstico rápido, honesto y con repuestos originales."
     },
     {
-      name: "Diana González",
-      role: "Agencia Digital BOG",
+      name: "Andrés Restrepo",
+      role: "Consultorio Médico (Bello - Niquía)",
       img: "5",
-      text: "Envié mis equipos desde Bogotá porque ya me habían cobrado mucho sin garantías en otros talleres. Me mostraron fotos del progreso técnico. 10/10 la transparencia de esta gente."
+      text: "Excelente servicio a domicilio. Recogieron las impresoras y dos computadores de nuestro consultorio en Bello y los devolvieron el mismo día 100% calibrados y repotenciados con unidades SSD. 10/10 en cumplimiento y factura electrónica."
     },
     {
       name: "Fernando Torres",
-      role: "Servicios Contables SA",
+      role: "Servicios Contables SA (Envigado)",
       img: "60",
-      text: "No solo arreglan equipos, me asesoraron en mejorar mi red local y servidor principal. Ya pasé todo mi equipo de cómputo a mantenimiento preventivo con ellos. Mucho profesionalismo."
+      text: "No solo arreglan impresoras láser y portátiles, nos asesoraron en el mantenimiento preventivo periódico de toda la red de oficina en Envigado. Mucho profesionalismo, precios justos y garantía escrita."
     }
   ];
 

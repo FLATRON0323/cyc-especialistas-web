@@ -1,6 +1,7 @@
 "use client";
 import { MapPin, CheckCircle, ShieldCheck, Phone, Wrench, ArrowRight } from "lucide-react";
 import { SITE_CONFIG } from "@/config/site";
+import Link from "next/link";
 
 export default function CoverageSection() {
   const municipalities = [
@@ -9,6 +10,9 @@ export default function CoverageSection() {
       desc: "Taller físico principal en Santa Cruz y atención a domicilio para empresas en El Poblado, Laureles, Belén, La Candelaria (Centro), Guayabal, Robledo, Castilla, Aranjuez y Buenos Aires.",
       badge: "Sede Central",
       popular: true,
+      url: SITE_CONFIG.googleMapsUrl,
+      isExternal: true,
+      buttonText: "Ver Sede en Google Maps",
       services: [
         "Revisión y diagnóstico en taller ($40.000)",
         "Destape de cabezales Epson EcoTank y Canon G",
@@ -21,6 +25,9 @@ export default function CoverageSection() {
       desc: "Servicio ágil en todo el Norte del Valle de Aburrá: Niquía, Parque de Bello, Cabañas, Navarra, Alcalá, Zamora, Copacabana y Girardota.",
       badge: "Zona Norte",
       popular: false,
+      url: "/bello",
+      isExternal: false,
+      buttonText: "Ver Casos y Cobertura Bello",
       services: [
         "Mantenimiento preventivo multimarca",
         "Reset y cambio físico de almohadillas bloqueadas",
@@ -33,6 +40,9 @@ export default function CoverageSection() {
       desc: "Soporte técnico integral de impresoras y computadores para oficinas, consultorios médicos, notarías y comercios en el Sur del Valle de Aburrá.",
       badge: "Zona Sur",
       popular: false,
+      url: "/envigado",
+      isExternal: false,
+      buttonText: "Ver Casos y Cobertura Envigado",
       services: [
         "Contratos de mantenimiento empresarial",
         "Mantenimiento térmico de computadores y laptops",
@@ -99,15 +109,37 @@ export default function CoverageSection() {
                 </div>
               </div>
 
-              <a
-                href={`${SITE_CONFIG.whatsappBaseUrl}?text=Hola,%20necesito%20servicio%20técnico%20para%20${encodeURIComponent(item.name)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-sm transition-all shadow-lg shadow-emerald-600/20"
-              >
-                <span>Agendar en {item.badge}</span>
-                <ArrowRight size={16} />
-              </a>
+              <div className="flex flex-col gap-2.5">
+                {item.isExternal ? (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-xs transition-all shadow-md shadow-blue-600/20"
+                  >
+                    <span>{item.buttonText}</span>
+                    <ArrowRight size={14} />
+                  </a>
+                ) : (
+                  <Link
+                    href={item.url}
+                    className="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-xs transition-all border border-slate-600"
+                  >
+                    <span>{item.buttonText}</span>
+                    <ArrowRight size={14} />
+                  </Link>
+                )}
+                
+                <a
+                  href={`${SITE_CONFIG.whatsappBaseUrl}?text=Hola,%20necesito%20servicio%20técnico%20para%20${encodeURIComponent(item.name)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2 text-xs transition-all shadow-md shadow-emerald-600/20"
+                >
+                  <Phone size={14} />
+                  <span>WhatsApp Directo</span>
+                </a>
+              </div>
             </div>
           ))}
         </div>

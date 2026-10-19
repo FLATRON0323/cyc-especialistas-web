@@ -48,7 +48,7 @@ export default function Navbar() {
             </a>
             <div className="hidden sm:block">
               <span className="font-bold text-xl tracking-tight text-slate-900 block leading-none">C&amp;C Especialistas</span>
-              <span className="text-[0.65rem] uppercase font-black tracking-[0.2em] text-brand-blue">En Impresión y Cómputo</span>
+              <span className="text-[0.65rem] uppercase font-black tracking-[0.2em] text-brand-blue">En Impresión y Computadores</span>
             </div>
           </div>
 

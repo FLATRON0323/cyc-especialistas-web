@@ -10,16 +10,17 @@ export default function Footer() {
           {/* Brand Info */}
           <div>
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-brand-blue to-blue-600 rounded-xl flex items-center justify-center text-white font-black text-2xl shadow-lg flex-shrink-0">C&C</div>
-              <span className="font-extrabold text-xl tracking-tight leading-none text-white uppercase w-auto">Especialistas<br/>En Impresoras</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-brand-blue to-blue-600 rounded-xl flex items-center justify-center text-white font-black text-2xl shadow-lg flex-shrink-0">C&amp;C</div>
+              <span className="font-extrabold text-xl tracking-tight leading-none text-white uppercase w-auto">C&amp;C Especialistas<br/><span className="text-sm font-semibold text-brand-blue normal-case">En Impresión y Computadores</span></span>
             </div>
             <p className="text-sm mb-8 leading-loose font-medium opacity-80">
-              Garantizamos la continuidad operativa de tu negocio con soluciones tecnológicas integrales. Experiencia real desde 2006 brindando soporte técnico, mantenimiento de impresoras, computadores y redes a nivel nacional.
+              Garantizamos la continuidad operativa de tu negocio con soluciones tecnológicas integrales. Más de 18 años de experiencia brindando servicio técnico especializado en mantenimiento de impresoras y computadores en Medellín y todo el Valle de Aburrá.
             </p>
-            <div className="flex gap-4">
-              <a href={SITE_CONFIG.youtube} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-800/80 flex items-center justify-center text-white hover:bg-red-600 hover:-translate-y-1 transition-all shadow-lg"><Youtube size={20} /></a>
-              <a href={SITE_CONFIG.facebook} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-800/80 flex items-center justify-center text-white hover:bg-brand-blue hover:-translate-y-1 transition-all shadow-lg"><Facebook size={20} /></a>
-              <a href={SITE_CONFIG.instagram} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-800/80 flex items-center justify-center text-white hover:bg-pink-600 hover:-translate-y-1 transition-all shadow-lg"><Instagram size={20} /></a>
+            <div className="flex flex-wrap gap-3">
+              <a href={SITE_CONFIG.youtube} target="_blank" rel="noopener noreferrer" aria-label="Canal oficial de YouTube de C&C Especialistas" className="w-11 h-11 rounded-full bg-slate-800/80 flex items-center justify-center text-white hover:bg-red-600 hover:-translate-y-1 transition-all shadow-lg"><Youtube size={18} /></a>
+              <a href={SITE_CONFIG.facebook} target="_blank" rel="noopener noreferrer" aria-label="Página de Facebook de C&C Especialistas" className="w-11 h-11 rounded-full bg-slate-800/80 flex items-center justify-center text-white hover:bg-brand-blue hover:-translate-y-1 transition-all shadow-lg"><Facebook size={18} /></a>
+              <a href={SITE_CONFIG.instagram} target="_blank" rel="noopener noreferrer" aria-label="Perfil de Instagram de C&C Especialistas" className="w-11 h-11 rounded-full bg-slate-800/80 flex items-center justify-center text-white hover:bg-pink-600 hover:-translate-y-1 transition-all shadow-lg"><Instagram size={18} /></a>
+              <a href={SITE_CONFIG.tiktok} target="_blank" rel="noopener noreferrer" aria-label="Cuenta oficial de TikTok de C&C Especialistas" className="w-11 h-11 rounded-full bg-slate-800/80 flex items-center justify-center text-white hover:bg-cyan-600 hover:-translate-y-1 transition-all shadow-lg"><span className="font-extrabold text-xs">TT</span></a>
             </div>
           </div>
 
@@ -53,10 +54,21 @@ export default function Footer() {
           {/* Legal / Trust */}
           <div>
             <h4 className="text-white font-black mb-8 text-sm uppercase tracking-widest">Contacto Directo</h4>
-            <ul className="space-y-6 text-sm">
+            <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-4 bg-slate-800/50 p-4 rounded-xl">
                 <MapPin className="text-brand-accent flex-shrink-0" size={24} />
-                <span><b className="text-white block mb-1">Taller Principal:</b>Cl. 102 #49C-53 Int. 301, Santa Cruz, Medellín.</span>
+                <div>
+                  <b className="text-white block mb-1">Taller Principal:</b>
+                  <span>Cl. 102 #49C-53 Int. 301, Santa Cruz, Medellín.</span>
+                  <a 
+                    href={SITE_CONFIG.googleMapsUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="mt-2 inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 font-bold underline"
+                  >
+                    Ver ubicación y reseñas en Google Maps →
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-4 border border-slate-800 p-4 rounded-xl">
                 <Phone className="text-brand-whatsapp flex-shrink-0" size={20} />

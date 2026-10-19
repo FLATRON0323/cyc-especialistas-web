@@ -31,7 +31,7 @@ export default function HeroSection() {
                 <Image key={i} className="w-6 h-6 rounded-full border-2 border-white relative z-0" src={`https://i.pravatar.cc/100?img=${i}`} alt="Cliente" width={24} height={24} />
               ))}
             </div>
-            <span className="text-xs sm:text-sm font-medium text-gray-700">⭐ Más de <strong className="text-brand-blue">46.000 clientes</strong> confían en nosotros</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700">⭐ Más de <strong className="text-brand-blue">+54.500 suscriptores en YouTube</strong> confían en nosotros</span>
           </motion.div>
           
           <motion.h1 
@@ -40,7 +40,7 @@ export default function HeroSection() {
             transition={{ delay: 0.1 }}
             className="text-4xl lg:text-5xl font-extrabold mt-2 leading-[1.2] text-slate-900 tracking-tight"
           >
-            Soluciones tecnológicas profesionales para <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-purple-600">impresoras y computadores</span> en Medellín y toda Colombia
+            Mantenimiento y Reparación de Impresoras y Computadores en <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-purple-600">Medellín, Bello, Envigado y Valle de Aburrá</span>
           </motion.h1>
           
           <motion.p 
@@ -49,7 +49,7 @@ export default function HeroSection() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-lg text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium"
           >
-            Más de 17 años ayudando a empresas y hogares a mantener sus equipos funcionando sin fallas, con servicio técnico especializado, repuestos originales y atención inmediata.
+            Soluciones tecnológicas profesionales para impresoras y computadores en Medellín y toda Colombia. Más de 18 años ayudando a empresas y hogares a mantener sus equipos funcionando sin fallas, con servicio técnico especializado, repuestos originales y atención inmediata.
           </motion.p>
           
           {/* Trust Micro Badges */}
@@ -59,11 +59,11 @@ export default function HeroSection() {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-6 mb-8 text-[0.8rem] font-bold text-slate-700"
           >
-            <span className="flex items-center gap-1.5"><CheckCircle2 size={16} className="text-brand-blue" /> +17 años de experiencia</span>
+            <span className="flex items-center gap-1.5"><CheckCircle2 size={16} className="text-brand-blue" /> +18 años de experiencia</span>
             <span className="flex items-center gap-1.5"><ShieldCheck size={16} className="text-green-600" /> Empresa legalmente constituida</span>
             <span className="flex items-center gap-1.5"><ShieldCheck size={16} className="text-brand-blue" /> Facturación electrónica</span>
-            <span className="flex items-center gap-1.5"><MapPin size={16} className="text-orange-500" /> Atención en Medellín y cobertura nacional</span>
-            <span className="flex items-center gap-1.5"><PlayCircle size={16} className="text-red-500" /> Canal educativo (+ miles de seguidores)</span>
+            <span className="flex items-center gap-1.5"><MapPin size={16} className="text-orange-500" /> Sede Santa Cruz y cobertura Valle de Aburrá</span>
+            <span className="flex items-center gap-1.5"><PlayCircle size={16} className="text-red-500" /> Canal educativo (+54.500 suscriptores)</span>
           </motion.div>
 
           {/* Brands Support */}
@@ -73,7 +73,7 @@ export default function HeroSection() {
             transition={{ delay: 0.35 }}
             className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-4 mb-8 text-xs font-bold text-gray-500 uppercase tracking-widest"
           >
-            Expertos en: <span className="text-brand-blue">Epson</span> • <span className="text-brand-blue">Canon</span> • <span className="text-brand-blue">HP</span> • <span className="text-brand-blue">Samsung</span> • <span className="text-brand-blue">Kyocera</span> • <span className="text-brand-blue">Ricoh</span>
+            Expertos en: <span className="text-brand-blue">Epson</span> • <span className="text-brand-blue">Canon</span> • <span className="text-brand-blue">HP</span> • <span className="text-brand-blue">Brother</span> • <span className="text-brand-blue">Kyocera</span> • <span className="text-brand-blue">Ricoh</span> • <span className="text-brand-blue">Samsung</span>
           </motion.div>
 
           {/* CTA Buttons */}

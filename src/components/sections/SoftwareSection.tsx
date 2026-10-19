@@ -66,13 +66,23 @@ export default function SoftwareSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="mt-12 flex"
+              className="mt-12 flex flex-col sm:flex-row gap-4"
             >
               <a 
-                href={`${SITE_CONFIG.whatsappBaseUrl}?text=Hola,%20deseo%20solicitar%20información%20sobre%20el%20software%20para%20talleres.`}
+                href={SITE_CONFIG.ccmanagerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-brand-accent to-yellow-400 text-slate-900 px-8 py-5 rounded-2xl font-black text-lg hover:shadow-[0_0_30px_rgba(255,214,0,0.6)] hover:-translate-y-1 transition-all flex items-center gap-3 w-full sm:w-auto justify-center group uppercase tracking-wider text-center"
               >
-                Solicitar información sobre el software para talleres <ArrowRight className="group-hover:translate-x-1 transition-transform flex-shrink-0" size={20} />
+                Conocer C&amp;C Manager Oficial <ArrowRight className="group-hover:translate-x-1 transition-transform flex-shrink-0" size={20} />
+              </a>
+              <a 
+                href={`${SITE_CONFIG.whatsappBaseUrl}?text=Hola,%20deseo%20solicitar%20información%20sobre%20el%20software%20para%20talleres.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-6 py-5 rounded-2xl font-bold text-base transition-all flex items-center justify-center text-center"
+              >
+                Demo por WhatsApp
               </a>
             </motion.div>
           </div>

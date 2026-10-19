@@ -100,12 +100,14 @@ export default function RootLayout({
           "closes": "14:00"
         }
       ],
+      "hasMap": SITE_CONFIG.googleMapsUrl,
       "areaServed": SITE_CONFIG.coverage,
       "sameAs": [
         SITE_CONFIG.youtube,
         SITE_CONFIG.facebook,
         SITE_CONFIG.instagram,
-        SITE_CONFIG.tiktok
+        SITE_CONFIG.tiktok,
+        SITE_CONFIG.cylexUrl
       ]
     },
     {
