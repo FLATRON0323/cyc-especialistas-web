@@ -65,8 +65,8 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden lg:flex items-center gap-8 font-semibold text-sm text-gray-600">
-            {['Soluciones', 'Proceso', 'Resultados', 'Testimonios', 'Software', 'FAQ'].map((item) => (
+          <div className="hidden lg:flex items-center gap-7 font-semibold text-sm text-gray-600">
+            {['Cotizador', 'Soluciones', 'Proceso', 'Resultados', 'Testimonios', 'Software', 'FAQ'].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-brand-blue relative transition-colors group">
                 {item}
                 <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
@@ -95,7 +95,7 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed top-[70px] left-0 w-full bg-white shadow-2xl z-40 border-t border-gray-100 lg:hidden flex flex-col p-6 gap-6"
           >
-            {['Soluciones', 'Proceso', 'Resultados', 'Testimonios', 'Software', 'FAQ'].map((item) => (
+            {['Cotizador', 'Soluciones', 'Proceso', 'Resultados', 'Testimonios', 'Software', 'FAQ'].map((item) => (
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`} 

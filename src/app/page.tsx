@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
+import QuickDiagnosticSection from '@/components/sections/QuickDiagnosticSection';
 import ProblemsSection from '@/components/sections/ProblemsSection';
 import WorkProcessSection from '@/components/sections/WorkProcessSection';
 import ResultsSection from '@/components/sections/ResultsSection';
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <Navbar />
       <main className="min-h-screen">
         <HeroSection />
+        <QuickDiagnosticSection />
         <ServicesSection />
         <CoverageSection />
         <ProblemsSection />

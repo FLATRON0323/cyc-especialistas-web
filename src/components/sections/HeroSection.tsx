@@ -88,8 +88,8 @@ export default function HeroSection() {
               <Calendar className="relative z-10 group-hover:animate-bounce" /> 
               <span className="relative z-10">Agendar Diagnóstico</span>
             </a>
-            <a href="#soluciones" className="bg-white border-2 border-gray-200 text-gray-800 px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:border-brand-blue hover:text-brand-blue hover:bg-blue-50 transition-all">
-              <Search size={18} /> Ver Soluciones
+            <a href="#cotizador" className="bg-white border-2 border-gray-200 text-gray-800 px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:border-brand-blue hover:text-brand-blue hover:bg-blue-50 transition-all">
+              <Search size={18} /> Cotizar Diagnóstico
             </a>
           </motion.div>
         </div>

@@ -112,7 +112,55 @@ export default function RootLayout({
         SITE_CONFIG.instagram,
         SITE_CONFIG.tiktok,
         SITE_CONFIG.cylexUrl
-      ]
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "128",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "knowsAbout": [
+        "Reparación de impresoras Epson EcoTank",
+        "Mantenimiento de impresoras láser HP, Brother y Kyocera",
+        "Destape ultrasónico de cabezales e inyectores",
+        "Reseteo de almohadillas y firmware EEPROM",
+        "Reparación y repotenciación de computadores y laptops",
+        "Instalación de unidades de estado sólido SSD y memoria RAM",
+        "Mantenimiento preventivo empresarial para oficinas"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios Técnicos Especializados",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Revisión y Diagnóstico Técnico en Taller",
+              "description": "Desarme técnico y diagnóstico detallado de impresoras y computadores en sede física Santa Cruz."
+            },
+            "price": "40000",
+            "priceCurrency": "COP"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Destape y Lavado de Cabezales de Impresoras",
+              "description": "Lavado ultrasónico de inyectores para Epson EcoTank y Canon MegaTank."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Repotenciación de Computadores con SSD y RAM",
+              "description": "Instalación de unidades de estado sólido y ampliación de memoria RAM para laptops y PC."
+            }
+          }
+        ]
+      }
     },
     {
       "@context": "https://schema.org",

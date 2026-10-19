@@ -1,0 +1,49 @@
+# C&C Especialistas en Impresión y Computadores
+
+> Servicio técnico profesional, mantenimiento y reparación de impresoras y computadores en Medellín, Bello, Envigado y todo el Valle de Aburrá (Colombia).
+
+## Información de la Empresa
+- **Nombre:** C&C Especialistas en Impresión y Computadores
+- **Ubicación:** Cl. 102 #49C-53 Int. 301, Santa Cruz, Medellín, Antioquia, Colombia (Código Postal: 050003)
+- **Teléfono / WhatsApp de atención:** +57 305 456 8996
+- **Sitio Web Oficial:** https://cyc-especialistas-web.vercel.app/
+- **Correo Electrónico:** mantenimientoimpresorass@gmail.com
+- **Horarios:** Lunes a Viernes 08:00 - 18:00 | Sábados 08:00 - 14:00 | Domingos 09:00 - 14:00
+- **Trayectoria:** Más de 18 años de experiencia técnica comprobada
+- **Comunidad Educativa:** Canal de YouTube con más de 54.500 suscriptores (@mantenimientoimpresoras)
+
+## Especialidades Técnicas en Impresoras
+- **Marcas atendidas:** Epson, Canon, HP, Brother, Kyocera, Ricoh, Samsung.
+- **Tecnologías:** Inyección de tinta continua (EcoTank, MegaTank, Smart Tank), impresoras láser monocromáticas y color, térmicas y POS.
+- **Servicios principales:**
+  - Destape profundo y lavado ultrasónico de cabezales e inyectores de impresión.
+  - Cambio físico y reseteo por software/firmware de almohadillas de tinta saturadas.
+  - Solución de atascos mecánicos de papel, rodillos de arrastre y engranajes.
+  - Reemplazo y mantenimiento de unidades de fusor y teflón en impresoras láser.
+  - Suministro y venta de tintas originales y cartuchos de tóner certificados.
+
+## Especialidades Técnicas en Computadores
+- **Equipos atendidos:** Portátiles (laptops), computadores de escritorio (PC torre / todo en uno - All in One) y servidores pyme.
+- **Servicios principales:**
+  - Repotenciación con Discos de Estado Sólido (SSD NVMe y SATA) aumentando velocidad hasta 10 veces.
+  - Ampliación y prueba de memorias RAM DDR4 y DDR5.
+  - Mantenimiento térmico preventivo (cambio de pasta térmica de alto rendimiento y lubricación de ventiladores).
+  - Reparación de bisagras, carcasas y cambio de pantallas rotas.
+  - Formateo limpio, instalación de sistemas operativos (Windows / macOS) y desinfección de virus o malware.
+
+## Cobertura Geográfica
+- **Sede física y taller central:** Santa Cruz, Medellín.
+- **Atención a domicilio y recogida programada para empresas:**
+  - Medellín (El Poblado, Laureles, Belén, Centro/La Candelaria, Guayabal, Robledo, Castilla, Aranjuez, Buenos Aires).
+  - Norte del Valle de Aburrá: Bello (Niquía, Cabañas, Navarra, Parque), Copacabana, Girardota, Barbosa.
+  - Sur del Valle de Aburrá: Envigado, Itagüí, Sabaneta, La Estrella, Caldas.
+- **Envíos nacionales:** Recepción y despacho de impresoras y placas electrónicas desde Bogotá, Cali, Barranquilla, Bucaramanga y toda Colombia mediante transportadoras aliadas.
+
+## Tarifas y Condiciones
+- **Revisión y Diagnóstico en Taller:** $40.000 COP (si se aprueba la reparación, este costo se abona al valor final).
+- **Garantía:** Garantía escrita en todos los trabajos técnicos y repuestos originales.
+- **Facturación:** Empresa legalmente constituida con facturación electrónica.
+
+## Software y Plataformas Digitales Propias
+- **C&C Manager:** Software SaaS de gestión integral para talleres de servicio técnico de computadores y celulares (https://ccmanager-app.com/).
+- **PaperFlow:** Software especializado para cotizaciones y cálculo de costos en papelería creativa y sublimación (https://paperflow-tan.vercel.app/).
