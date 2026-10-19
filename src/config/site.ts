@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   phoneRaw: "573054568996",
   phoneFormatted: "+57 305 456 8996",
   phoneDisplay: "305 456 8996",
-  email: "mantenimientoimpresoras@gmail.com",
+  email: "mantenimientoimpresorass@gmail.com",
   youtube: "https://www.youtube.com/channel/UCWimTDjbprgUu2iTs2sCKww",
   facebook: "https://www.facebook.com/cycespesialistasenimpresion/",
   instagram: "https://www.instagram.com/impresorasmantenimiento/",
