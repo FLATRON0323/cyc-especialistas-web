@@ -1,66 +1,149 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
-import { BotMessageSquare, X, Sparkles } from "lucide-react";
+import { BotMessageSquare, X, Sparkles, MessageCircle, ChevronRight, CheckCircle2 } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { SITE_CONFIG } from "@/config/site";
 
 export default function AIAssistantWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
+
+  const quickAnswers: Record<string, { title: string; answer: string; waText: string }> = {
+    cabezal: {
+      title: "Cabezal Tapado / Líneas en Blanco",
+      answer: "Realizamos lavado ultrasónico de inyectores con químicos especiales para Epson y Canon. Diagnóstico rápido de 4 a 24 horas.",
+      waText: "Hola, necesito destape de cabezales para mi impresora Epson/Canon",
+    },
+    almohadillas: {
+      title: "Error de Almohadillas / Fin de Vida Útil",
+      answer: "Hacemos el reseteo digital de firmware EEPROM oficial y reemplazo físico de esponjas receptoras para evitar derrames.",
+      waText: "Hola, tengo la impresora bloqueada por error de almohadillas",
+    },
+    tintas_toner: {
+      title: "Cotizar Tintas, Tóner o Repuestos",
+      answer: "Disponemos de tintas Epson EcoTank (544, 504, 664), Canon, tóner HP y Brother con entrega el mismo día en el Valle de Aburrá.",
+      waText: "Hola, quiero cotizar tintas o tóner para mi impresora",
+    },
+    computador: {
+      title: "Computador Lento / Repotenciación SSD",
+      answer: "Instalamos discos de estado sólido NVMe y ampliamos memoria RAM, acelerando tu computador hasta 10 veces sin perder archivos.",
+      waText: "Hola, quiero repotenciar mi computador con disco sólido SSD",
+    },
+  };
 
   return (
     <>
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="fixed bottom-40 right-4 sm:right-6 left-4 sm:left-auto w-[calc(100vw-2rem)] sm:w-80 bg-white shadow-2xl rounded-2xl border border-gray-100 overflow-hidden z-[100] flex flex-col"
-            style={{ maxHeight: '400px', height: '100%' }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            className="fixed bottom-24 right-4 sm:right-6 left-4 sm:left-auto w-[calc(100vw-2rem)] sm:w-96 bg-white shadow-2xl rounded-3xl border border-gray-100 overflow-hidden z-[100] flex flex-col"
+            style={{ maxHeight: "480px" }}
           >
-            <div className="bg-gradient-to-r from-brand-blue to-purple-600 p-4 text-white flex justify-between items-center">
-              <div className="flex items-center gap-2">
-                <Sparkles size={18} className="text-brand-accent animate-pulse" />
-                <span className="font-bold text-sm">Asistente IA (Beta)</span>
+            {/* Header */}
+            <div className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 p-4 text-white flex justify-between items-center border-b border-white/10">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-full bg-brand-blue/30 border border-brand-accent/50 flex items-center justify-center">
+                  <Sparkles size={16} className="text-brand-accent animate-pulse" />
+                </div>
+                <div>
+                  <span className="font-bold text-sm block leading-tight">Asistente Técnico C&amp;C</span>
+                  <span className="text-[10px] text-emerald-400 font-semibold flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> En línea en Medellín
+                  </span>
+                </div>
               </div>
-              <button onClick={() => setIsOpen(false)} className="hover:bg-white/20 p-1 rounded-full transition">
+              <button 
+                onClick={() => { setIsOpen(false); setSelectedTopic(null); }} 
+                className="hover:bg-white/10 p-1.5 rounded-full transition text-slate-300 hover:text-white"
+                aria-label="Cerrar Asistente"
+              >
                 <X size={18} />
               </button>
             </div>
-            <div className="flex-grow p-6 flex flex-col items-center justify-center text-center bg-gray-50">
-              <BotMessageSquare size={48} className="text-gray-300 mb-4" />
-              <h3 className="font-bold text-gray-700 mb-2">¡Hola! Estoy aprendiendo...</h3>
-              <p className="text-xs text-gray-500 mb-4">
-                Próximamente podré diagnosticar tu equipo automáticamente y conectarte con un técnico mediante IA.
-              </p>
-              <a href={SITE_CONFIG.whatsappBaseUrl} className="text-sm bg-brand-blue text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600 transition w-full">
-                Hablar con un humano ahora
-              </a>
+
+            {/* Content Body */}
+            <div className="p-5 overflow-y-auto space-y-4 bg-slate-50/50">
+              {!selectedTopic ? (
+                <>
+                  <p className="text-xs text-slate-600 font-medium">
+                    👋 ¡Hola! ¿Qué problema presenta tu equipo hoy? Selecciona una opción para darte solución inmediata:
+                  </p>
+                  <div className="space-y-2">
+                    {Object.entries(quickAnswers).map(([key, item]) => (
+                      <button
+                        key={key}
+                        onClick={() => setSelectedTopic(key)}
+                        className="w-full text-left p-3 rounded-xl bg-white border border-gray-200/80 hover:border-brand-blue hover:shadow-md transition-all flex items-center justify-between group"
+                      >
+                        <span className="text-xs font-bold text-slate-800 group-hover:text-brand-blue">
+                          {item.title}
+                        </span>
+                        <ChevronRight size={14} className="text-slate-400 group-hover:text-brand-blue group-hover:translate-x-0.5 transition-transform" />
+                      </button>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <div className="space-y-3 bg-white p-4 rounded-2xl border border-blue-100 shadow-sm">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-extrabold text-brand-blue flex items-center gap-1.5">
+                      <CheckCircle2 size={14} className="text-emerald-500" /> Solución Recomendada:
+                    </span>
+                    <button
+                      onClick={() => setSelectedTopic(null)}
+                      className="text-[11px] text-slate-500 hover:text-slate-800 font-bold underline"
+                    >
+                      ← Volver
+                    </button>
+                  </div>
+                  <h4 className="text-sm font-bold text-slate-900 leading-tight">
+                    {quickAnswers[selectedTopic].title}
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {quickAnswers[selectedTopic].answer}
+                  </p>
+                  <a
+                    href={`${SITE_CONFIG.whatsappBaseUrl}?text=${encodeURIComponent(quickAnswers[selectedTopic].waText)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full mt-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 px-3 rounded-xl text-center text-xs flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition-all"
+                  >
+                    <MessageCircle size={15} /> Consultar por WhatsApp
+                  </a>
+                </div>
+              )}
+
+              <div className="pt-2 border-t border-slate-200/60 text-center">
+                <a
+                  href={`${SITE_CONFIG.whatsappBaseUrl}?text=Hola,%20necesito%20hablar%20con%20un%20técnico%20de%20C%26C`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[11px] text-brand-blue hover:underline font-bold flex items-center justify-center gap-1"
+                >
+                  <MessageCircle size={12} /> O habla directamente con un técnico humano →
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
+      {/* Main Floating Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-24 right-6 bg-gradient-to-r from-brand-blue to-purple-600 text-white w-14 h-14 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center z-[100] group"
+        aria-label="Abrir asistente técnico de diagnóstico"
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-slate-950 via-brand-blue to-blue-700 text-white px-4 py-3 rounded-full shadow-2xl hover:scale-105 transition-all flex items-center gap-2.5 z-[100] border-2 border-white/20 group hover:shadow-brand-blue/40"
       >
-        <Sparkles size={24} className="group-hover:animate-spin" />
+        <span className="relative flex h-3 w-3">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+        </span>
+        <Sparkles size={18} className="text-brand-accent group-hover:rotate-12 transition-transform" />
+        <span className="text-xs font-bold tracking-wide hidden sm:inline">Diagnóstico Rápido</span>
       </button>
-
-      {/* Legacy WhatsApp Button */}
-      <a
-        href={SITE_CONFIG.whatsappBaseUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Contactar por WhatsApp"
-        className="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center z-[100]"
-      >
-        <svg className="w-8 h-8 fill-current text-white" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-        </svg>
-      </a>
     </>
   );
 }

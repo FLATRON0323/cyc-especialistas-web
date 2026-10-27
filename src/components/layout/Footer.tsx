@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail, Youtube, Facebook, Instagram, ShieldCheck, Lock } from "lucide-react";
+import Link from "next/link";
+import { MapPin, Phone, Mail, Youtube, Facebook, Instagram, ShieldCheck, Lock, ExternalLink } from "lucide-react";
 import { SITE_CONFIG } from "@/config/site";
 
 export default function Footer() {
@@ -24,31 +25,52 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Directory */}
+          {/* Cobertura Local (SEO Internal Linking) */}
           <div>
-            <h4 className="text-white font-black mb-8 text-sm uppercase tracking-widest">Nuestra Empresa</h4>
-            <ul className="space-y-4 text-sm font-medium mb-8">
+            <h4 className="text-white font-black mb-6 text-sm uppercase tracking-widest">Sedes y Cobertura</h4>
+            <ul className="space-y-3 text-sm font-medium">
               <li>
-                <strong className="text-white block mb-1">Misión</strong>
-                Brindar soluciones tecnológicas integrales en reparación, mantenimiento y optimización de equipos, garantizando calidad, eficiencia y confianza en todo el país.
+                <Link href="/" className="text-slate-300 hover:text-brand-accent transition flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
+                  Medellín (Taller Central Santa Cruz)
+                </Link>
               </li>
               <li>
-                <strong className="text-white block mb-1">Visión 2028</strong>
-                Ser líderes reconocidos por la innovación, servicio especializado y desarrollo de herramientas digitales para negocios.
+                <Link href="/bello" className="text-slate-300 hover:text-brand-accent transition flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Servicio Técnico en Bello (Niquía / Cabañas)
+                </Link>
+              </li>
+              <li>
+                <Link href="/envigado" className="text-slate-300 hover:text-brand-accent transition flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                  Servicio Técnico en Envigado (Zúñiga / Jardines)
+                </Link>
+              </li>
+              <li>
+                <Link href="/itagui-sabaneta" className="text-slate-300 hover:text-brand-accent transition flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                  Servicio Técnico en Itagüí &amp; Sabaneta
+                </Link>
+              </li>
+              <li className="pt-2 border-t border-slate-800">
+                <Link href="/#productos" className="text-brand-accent hover:underline flex items-center gap-1">
+                  Ver Catálogo de Repuestos y Tintas →
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-black mb-8 text-sm uppercase tracking-widest">Horarios y Ubicación</h4>
+            <h4 className="text-white font-black mb-8 text-sm uppercase tracking-widest">Horarios y Atención</h4>
             <ul className="space-y-4 text-sm font-medium mb-6">
               <li className="flex items-center justify-between border-b border-slate-700 pb-2"><span>Lunes - Viernes:</span> <strong className="text-white">08:00 – 18:00</strong></li>
               <li className="flex items-center justify-between border-b border-slate-700 pb-2"><span>Sábados:</span> <strong className="text-white">08:00 – 14:00</strong></li>
               <li className="flex items-center justify-between pb-2"><span>Domingos:</span> <strong className="text-white">09:00 – 14:00</strong></li>
             </ul>
-            <p className="text-xs text-slate-400 mb-2">Cobertura principal:</p>
-            <p className="text-xs text-brand-accent font-bold uppercase tracking-wider">Medellín • Bello • Envigado • Itagüí • Sabaneta • Copacabana</p>
+            <p className="text-xs text-slate-400 mb-1">Ruta diaria de recogida empresarial:</p>
+            <p className="text-xs text-emerald-400 font-bold">Todo el Valle de Aburrá de Norte a Sur</p>
           </div>
 
           {/* Legal / Trust */}

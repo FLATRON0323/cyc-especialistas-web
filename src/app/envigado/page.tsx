@@ -222,6 +222,24 @@ export default function EnvigadoPage() {
             </div>
           </div>
 
+          {/* Otras Zonas de Cobertura en el Valle de Aburrá */}
+          <div className="border-t border-slate-800 pt-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
+              Otras zonas con servicio técnico directo:
+            </span>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/" className="text-xs text-blue-400 hover:text-blue-300 font-bold bg-slate-900 border border-slate-800 px-3.5 py-2 rounded-xl transition">
+                Taller Central Medellín →
+              </Link>
+              <Link href="/bello" className="text-xs text-emerald-400 hover:text-emerald-300 font-bold bg-slate-900 border border-slate-800 px-3.5 py-2 rounded-xl transition">
+                Servicio en Bello →
+              </Link>
+              <Link href="/itagui-sabaneta" className="text-xs text-purple-400 hover:text-purple-300 font-bold bg-slate-900 border border-slate-800 px-3.5 py-2 rounded-xl transition">
+                Servicio en Itagüí &amp; Sabaneta →
+              </Link>
+            </div>
+          </div>
+
         </section>
 
       </main>

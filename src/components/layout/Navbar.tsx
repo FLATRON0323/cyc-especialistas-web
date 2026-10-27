@@ -65,10 +65,17 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden lg:flex items-center gap-7 font-semibold text-sm text-gray-600">
-            {['Cotizador', 'Soluciones', 'Proceso', 'Resultados', 'Testimonios', 'Software', 'FAQ'].map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-brand-blue relative transition-colors group">
-                {item}
+          <div className="hidden lg:flex items-center gap-6 font-semibold text-sm text-gray-600">
+            {[
+              { label: "Diagnóstico", href: "/#cotizador" },
+              { label: "Servicios", href: "/#servicios" },
+              { label: "Repuestos & Tintas", href: "/#productos" },
+              { label: "Cobertura", href: "/#cobertura" },
+              { label: "Software", href: "/#software" },
+              { label: "FAQ", href: "/#faq" },
+            ].map((item) => (
+              <a key={item.label} href={item.href} className="hover:text-brand-blue relative transition-colors group">
+                {item.label}
                 <span className="absolute left-0 bottom-[-4px] w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </a>
             ))}
@@ -79,7 +86,7 @@ export default function Navbar() {
               <MessageCircle size={18} /> Hablar ahora
             </a>
             
-            <button className="lg:hidden text-slate-800 p-2" onClick={() => setMenuOpen(!menuOpen)}>
+            <button className="lg:hidden text-slate-800 p-2" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menú de navegación">
               {menuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
@@ -93,16 +100,23 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed top-[70px] left-0 w-full bg-white shadow-2xl z-40 border-t border-gray-100 lg:hidden flex flex-col p-6 gap-6"
+            className="fixed top-[70px] left-0 w-full bg-white shadow-2xl z-40 border-t border-gray-100 lg:hidden flex flex-col p-6 gap-5"
           >
-            {['Cotizador', 'Soluciones', 'Proceso', 'Resultados', 'Testimonios', 'Software', 'FAQ'].map((item) => (
+            {[
+              { label: "Diagnóstico Rápido", href: "/#cotizador" },
+              { label: "Catálogo de Servicios", href: "/#servicios" },
+              { label: "Repuestos y Tintas en Stock", href: "/#productos" },
+              { label: "Zonas de Cobertura Valle de Aburrá", href: "/#cobertura" },
+              { label: "Software C&C Manager", href: "/#software" },
+              { label: "Preguntas Frecuentes", href: "/#faq" },
+            ].map((item) => (
               <a 
-                key={item} 
-                href={`#${item.toLowerCase()}`} 
+                key={item.label} 
+                href={item.href} 
                 onClick={() => setMenuOpen(false)}
-                className="text-xl font-bold text-slate-800 hover:text-brand-blue"
+                className="text-lg font-bold text-slate-800 hover:text-brand-blue"
               >
-                {item}
+                {item.label}
               </a>
             ))}
             <a href={SITE_CONFIG.whatsappBaseUrl} className="bg-brand-whatsapp text-white w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg">

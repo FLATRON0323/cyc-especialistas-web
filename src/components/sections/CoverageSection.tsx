@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function CoverageSection() {
   const municipalities = [
     {
-      name: "Medellín (Sede Taller & Domicilio Empresarial)",
-      desc: "Taller físico principal en Santa Cruz y atención a domicilio para empresas en El Poblado, Laureles, Belén, La Candelaria (Centro), Guayabal, Robledo, Castilla, Aranjuez y Buenos Aires.",
+      name: "Medellín (Taller Central & Domicilio)",
+      desc: "Taller físico principal en Santa Cruz y atención a domicilio en El Poblado, Laureles, Belén, Centro, Guayabal, Robledo y Castilla.",
       badge: "Sede Central",
       popular: true,
       url: SITE_CONFIG.googleMapsUrl,
@@ -14,39 +14,54 @@ export default function CoverageSection() {
       buttonText: "Ver Sede en Google Maps",
       services: [
         "Revisión y diagnóstico en taller ($40.000)",
-        "Destape de cabezales Epson EcoTank y Canon G",
+        "Destape ultrasónico de cabezales Epson y Canon",
         "Mantenimiento de fusores láser HP y Brother",
-        "Repotenciación de portátiles con SSD NVMe y RAM",
+        "Repotenciación de PC y laptops con SSD y RAM",
       ]
     },
     {
-      name: "Bello, Copacabana, Girardota y Barbosa",
-      desc: "Servicio ágil en todo el Norte del Valle de Aburrá: Niquía, Parque de Bello, Cabañas, Navarra, Alcalá, Zamora, Copacabana y Girardota.",
+      name: "Bello y Norte del Valle de Aburrá",
+      desc: "Atención técnica rápida en Niquía, Parque de Bello, Cabañas, Navarra, Alcalá, Zamora, Copacabana y Girardota.",
       badge: "Zona Norte",
       popular: false,
       url: "/bello",
       isExternal: false,
-      buttonText: "Ver Casos y Cobertura Bello",
+      buttonText: "Ver Cobertura Bello",
       services: [
-        "Mantenimiento preventivo multimarca",
-        "Reset y cambio físico de almohadillas bloqueadas",
-        "Corrección de atascos y rodillos de arrastre",
-        "Recogida y entrega de equipos para empresas",
+        "Reset y cambio físico de almohadillas EEPROM",
+        "Destape de inyectores Epson EcoTank",
+        "Solución a atascos continuos de papel",
+        "Recogida y entrega empresarial programada",
       ]
     },
     {
-      name: "Envigado, Itagüí, Sabaneta, La Estrella y Caldas",
-      desc: "Soporte técnico integral de impresoras y computadores para oficinas, consultorios médicos, notarías y comercios en el Sur del Valle de Aburrá.",
+      name: "Envigado y Sector Empresarial",
+      desc: "Servicio corporativo para empresas, notarías y consultorios en Zúñiga, Jardines, Otraparte, Alcalá y El Poblado.",
       badge: "Zona Sur",
       popular: false,
       url: "/envigado",
       isExternal: false,
-      buttonText: "Ver Casos y Cobertura Envigado",
+      buttonText: "Ver Cobertura Envigado",
       services: [
-        "Contratos de mantenimiento empresarial",
-        "Mantenimiento térmico de computadores y laptops",
-        "Venta de tintas originales y tóner láser",
-        "Facturación electrónica y garantía escrita",
+        "Mantenimiento láser HP, Brother y Kyocera",
+        "Contratos preventivos para oficinas",
+        "Venta de tóner original y genérico premium",
+        "Facturación electrónica Dian con garantía",
+      ]
+    },
+    {
+      name: "Itagüí, Sabaneta, La Estrella y Caldas",
+      desc: "Soporte técnico para parques industriales, bodegas, distribuidoras y comercio en Autopista Sur, Ditaires, San Fernando y Sabaneta.",
+      badge: "Zona Industrial",
+      popular: false,
+      url: "/itagui-sabaneta",
+      isExternal: false,
+      buttonText: "Ver Cobertura Itagüí & Sabaneta",
+      services: [
+        "Mantenimiento de impresoras térmicas y POS",
+        "Reparación de multifuncionales de alto volumen",
+        "Repotenciación de computadores empresariales",
+        "Ruta diaria de mensajería técnica en el Sur",
       ]
     }
   ];
@@ -67,7 +82,7 @@ export default function CoverageSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {municipalities.map((item, idx) => (
             <div 
               key={idx}
