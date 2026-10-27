@@ -9,13 +9,41 @@ export const metadata: Metadata = {
   title: "Mantenimiento de Impresoras y Computadores en Envigado | C&C Especialistas",
   description: "Servicio técnico para empresas, notarías y consultorios en Envigado. Reparación de impresoras láser HP, Brother, Kyocera y portátiles. Atención a domicilio. WhatsApp +57 305 456 8996.",
   alternates: {
-    canonical: "/envigado",
+    canonical: `${SITE_CONFIG.domainUrl}/envigado`,
+  },
+  openGraph: {
+    title: "Mantenimiento de Impresoras y Computadores en Envigado | C&C Especialistas",
+    description: "Servicio técnico para empresas, notarías y consultorios en Envigado. Reparación de impresoras láser HP, Brother, Kyocera y portátiles.",
+    url: `${SITE_CONFIG.domainUrl}/envigado`,
   },
 };
 
 export default function EnvigadoPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": SITE_CONFIG.domainUrl,
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mantenimiento en Envigado",
+        "item": `${SITE_CONFIG.domainUrl}/envigado`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-slate-950 text-slate-100">
         

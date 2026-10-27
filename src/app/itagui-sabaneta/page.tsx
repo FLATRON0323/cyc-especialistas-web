@@ -9,13 +9,41 @@ export const metadata: Metadata = {
   title: "Mantenimiento de Impresoras y Computadores en Itagüí y Sabaneta | C&C Especialistas",
   description: "Servicio técnico multimarca en Itagüí y Sabaneta. Mantenimiento y reparación de impresoras Epson, HP, Canon, Brother y computadores. Soporte a industrias y comercios. WhatsApp +57 305 456 8996.",
   alternates: {
-    canonical: "/itagui-sabaneta",
+    canonical: `${SITE_CONFIG.domainUrl}/itagui-sabaneta`,
+  },
+  openGraph: {
+    title: "Mantenimiento de Impresoras y Computadores en Itagüí y Sabaneta | C&C Especialistas",
+    description: "Servicio técnico multimarca en Itagüí y Sabaneta. Mantenimiento de impresoras Epson, HP, Canon, Brother y computadores para industrias y comercios.",
+    url: `${SITE_CONFIG.domainUrl}/itagui-sabaneta`,
   },
 };
 
 export default function ItaguiSabanetaPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": SITE_CONFIG.domainUrl,
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mantenimiento en Itagüí y Sabaneta",
+        "item": `${SITE_CONFIG.domainUrl}/itagui-sabaneta`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-slate-950 text-slate-100">
         

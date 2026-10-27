@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "/",
+    canonical: SITE_CONFIG.domainUrl,
   },
   openGraph: {
     title: "C&C Especialistas en Impresión y Computadores | Medellín, Bello y Valle de Aburrá",

@@ -9,13 +9,41 @@ export const metadata: Metadata = {
   title: "Mantenimiento y Reparación de Impresoras y Computadores en Bello | C&C Especialistas",
   description: "Servicio técnico especializado en impresoras Epson, Canon, HP, Brother y computadores en Bello, Niquía, Cabañas, Navarra y Parque de Bello. Domicilio empresarial y taller central. WhatsApp +57 305 456 8996.",
   alternates: {
-    canonical: "/bello",
+    canonical: `${SITE_CONFIG.domainUrl}/bello`,
+  },
+  openGraph: {
+    title: "Mantenimiento de Impresoras y Computadores en Bello | C&C Especialistas",
+    description: "Servicio técnico en Bello, Niquía, Cabañas y Navarra. Reparación Epson, Canon, HP, Brother y mantenimiento de computadores.",
+    url: `${SITE_CONFIG.domainUrl}/bello`,
   },
 };
 
 export default function BelloPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": SITE_CONFIG.domainUrl,
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mantenimiento en Bello",
+        "item": `${SITE_CONFIG.domainUrl}/bello`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navbar />
       <main className="min-h-screen bg-slate-950 text-slate-100">
         
