@@ -53,6 +53,18 @@ export default function Footer() {
                   Servicio Técnico en Itagüí &amp; Sabaneta
                 </Link>
               </li>
+              <li>
+                <Link href="/reset-almohadillas-epson" className="text-slate-300 hover:text-brand-accent transition flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+                  Reset Almohadillas Epson (Desbloqueo)
+                </Link>
+              </li>
+              <li>
+                <Link href="/destape-cabezales-impresoras" className="text-slate-300 hover:text-brand-accent transition flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                  Destape y Lavado de Cabezales
+                </Link>
+              </li>
               <li className="pt-2 border-t border-slate-800">
                 <Link href="/#productos" className="text-brand-accent hover:underline flex items-center gap-1">
                   Ver Catálogo de Repuestos y Tintas →

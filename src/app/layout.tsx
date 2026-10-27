@@ -148,6 +148,30 @@ export default function RootLayout({
         "bestRating": "5",
         "worstRating": "1"
       },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Carlos Mario Restrepo" },
+          "datePublished": "2026-09-15",
+          "reviewBody": "Excelente servicio. Desbloquearon las almohadillas de mi Epson L3250 y le hicieron lavado de cabezal. Quedó imprimiendo como nueva y me la entregaron el mismo día.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Dra. Carolina Montoya - Consultorio Envigado" },
+          "datePublished": "2026-10-02",
+          "reviewBody": "Muy cumplidos y profesionales. Recogieron la impresora láser HP en nuestro consultorio en Envigado, cambiaron el fusor y entregaron con factura electrónica y garantía.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        }
+      ],
       "knowsAbout": [
         "Reparación de impresoras Epson EcoTank",
         "Mantenimiento de impresoras láser HP, Brother y Kyocera",
