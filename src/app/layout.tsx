@@ -153,13 +153,16 @@ export default function RootLayout({
         "Mantenimiento de impresoras láser HP, Brother y Kyocera",
         "Destape ultrasónico de cabezales e inyectores",
         "Reseteo de almohadillas y firmware EEPROM",
+        "Venta de tintas originales Epson, Canon, HP y Brother en Medellín",
+        "Distribución de tóner para impresoras láser HP, Brother y Kyocera",
+        "Venta de repuestos para impresoras: cabezales, almohadillas, rodillos y unidades fusoras",
         "Reparación y repotenciación de computadores y laptops",
         "Instalación de unidades de estado sólido SSD y memoria RAM",
-        "Mantenimiento preventivo empresarial para oficinas"
+        "Mantenimiento preventivo empresarial para oficinas en el Valle de Aburrá"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Servicios Técnicos Especializados",
+        "name": "Soluciones Técnicas, Repuestos y Suministros",
         "itemListElement": [
           {
             "@type": "Offer",
@@ -175,8 +178,40 @@ export default function RootLayout({
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Destape y Lavado de Cabezales de Impresoras",
-              "description": "Lavado ultrasónico de inyectores para Epson EcoTank y Canon MegaTank."
+              "name": "Destape y Lavado Ultrasónico de Cabezales",
+              "description": "Lavado ultrasónico de inyectores para Epson EcoTank y Canon MegaTank con solventes químicos especiales."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Reseteo y Cambio Físico de Almohadillas",
+              "description": "Solución al error de almohadillas al final de su vida útil con firmware oficial y cambio de esponjas."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Tintas Originales y Certificadas Epson, Canon, HP y Brother",
+              "description": "Botellas de tinta original y genérica premium serie 504, 544, 664, GI-190, GT51/GT53 y BTD60 con entrega en Medellín y Valle de Aburrá."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Cartuchos de Tóner Láser HP, Brother y Kyocera",
+              "description": "Tóner de alto rendimiento para impresoras monocromáticas y color empresariales con garantía de impresión."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Repuestos Originales de Impresoras (Cabezales, Rodillos y Fusores)",
+              "description": "Venta e instalación de cabezales nuevos, almohadillas con chip, rodillos de arrastre y filminas de teflón."
             }
           },
           {
@@ -184,7 +219,7 @@ export default function RootLayout({
             "itemOffered": {
               "@type": "Service",
               "name": "Repotenciación de Computadores con SSD y RAM",
-              "description": "Instalación de unidades de estado sólido y ampliación de memoria RAM para laptops y PC."
+              "description": "Instalación de unidades de estado sólido NVMe/SATA y ampliación de memoria RAM para laptops y PC aumentando velocidad hasta 10 veces."
             }
           }
         ]
