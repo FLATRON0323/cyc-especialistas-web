@@ -19,30 +19,85 @@ export const metadata: Metadata = {
 };
 
 export default function ItaguiSabanetaPage() {
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": SITE_CONFIG.domainUrl,
+  const schemasJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": SITE_CONFIG.domainUrl,
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mantenimiento en Itagüí y Sabaneta",
+          "item": `${SITE_CONFIG.domainUrl}/itagui-sabaneta`,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Mantenimiento Técnico de Impresoras y Computadores en Itagüí y Sabaneta",
+      "serviceType": "Soporte Técnico Industrial y Comercial",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": SITE_CONFIG.name,
+        "telephone": `+${SITE_CONFIG.phoneRaw}`,
+        "url": SITE_CONFIG.domainUrl,
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Mantenimiento en Itagüí y Sabaneta",
-        "item": `${SITE_CONFIG.domainUrl}/itagui-sabaneta`,
-      },
-    ],
-  };
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Itagüí, Antioquia",
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Sabaneta, Antioquia",
+        },
+      ],
+      "description": "Soporte preventivo y correctivo para impresoras térmicas, láser, multifuncionales y computadores en industrias y comercios de Itagüí y Sabaneta.",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Prestan servicio en bodegas y zonas industriales de Itagüí?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, atendemos empresas en San Fernando, Ditaires, Santa María, Autopista Sur y parques industriales con visita presencial o recogida rápida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Reparan impresoras de etiquetas térmicas y multifuncionales de oficina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atendemos impresoras Zebra, Xprinter, Epson, Canon y láser HP, Brother y Kyocera para puntos de venta, despachos y centros de distribución."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuentan con servicio en Sabaneta (Las Lomitas, Calle Larga, Parque)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, disponemos de cobertura completa en todo Sabaneta para empresas, consultorios y particulares con recogida programada en el mismo día."
+          }
+        }
+      ]
+    }
+  ];
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemasJsonLd) }}
       />
       <Navbar />
       <main className="min-h-screen bg-slate-950 text-slate-100">
@@ -144,6 +199,33 @@ export default function ItaguiSabanetaPage() {
             >
               Contactar Asesor Técnico
             </a>
+          </div>
+
+          {/* Preguntas Frecuentes Locales en Itagüí y Sabaneta */}
+          <div className="border-t border-slate-800 pt-12 space-y-6">
+            <h2 className="text-2xl font-bold text-white tracking-tight">
+              Preguntas Frecuentes sobre Servicio Técnico en Itagüí y Sabaneta
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">¿Atienden bodegas y fábricas en Itagüí?</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Sí, atendemos zonas industriales de Itagüí, San Fernando, Ditaires y Autopista Sur con atención presencial y recogida express.
+                </p>
+              </div>
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">¿Reparan impresoras térmicas y de etiquetas?</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Damos mantenimiento a impresoras térmicas Zebra, Xprinter, Epson y Brother para logística, comercio y puntos de venta.
+                </p>
+              </div>
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">¿Tienen servicio a domicilio en Sabaneta?</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Contamos con cobertura diaria en Sabaneta (Calle Larga, Las Lomitas, Parque) para recogida y entrega de computadores e impresoras.
+                </p>
+              </div>
+            </div>
           </div>
 
         </section>

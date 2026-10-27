@@ -19,30 +19,79 @@ export const metadata: Metadata = {
 };
 
 export default function BelloPage() {
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": SITE_CONFIG.domainUrl,
+  const schemasJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": SITE_CONFIG.domainUrl,
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mantenimiento en Bello",
+          "item": `${SITE_CONFIG.domainUrl}/bello`,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Mantenimiento y Reparación de Impresoras y Computadores en Bello",
+      "serviceType": "Reparación y Mantenimiento Técnico",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": SITE_CONFIG.name,
+        "telephone": `+${SITE_CONFIG.phoneRaw}`,
+        "url": SITE_CONFIG.domainUrl,
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Mantenimiento en Bello",
-        "item": `${SITE_CONFIG.domainUrl}/bello`,
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Bello, Antioquia",
       },
-    ],
-  };
+      "description": "Servicio técnico especializado en impresoras Epson, Canon, HP, Brother y mantenimiento de computadores en Bello, Niquía, Cabañas y Navarra.",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Prestan servicio a domicilio y recogida en Niquía, Cabañas y Parque de Bello?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, en C&C Especialistas recogemos y entregamos equipos en Niquía, Cabañas, Navarra, Parque de Bello, Alcalá, Zamora y zonas aledañas con total seguridad y garantía directa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Reparan impresoras Epson con error de almohadillas o inyectores tapados en Bello?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, somos especialistas en destape ultrasónico de cabezales Epson EcoTank y reseteo de almohadillas por software oficial, además de reparación de mecanismos de arrastre de papel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tarda el diagnóstico y reparación en Bello?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El diagnóstico técnico se realiza en un plazo de 4 a 24 horas. Los mantenimientos preventivos y cambio de consumibles se entregan generalmente el mismo día."
+          }
+        }
+      ]
+    }
+  ];
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemasJsonLd) }}
       />
       <Navbar />
       <main className="min-h-screen bg-slate-950 text-slate-100">
@@ -144,6 +193,33 @@ export default function BelloPage() {
             >
               Agendar Recogida por WhatsApp
             </a>
+          </div>
+
+          {/* Preguntas Frecuentes Locales en Bello */}
+          <div className="border-t border-slate-800 pt-12 space-y-6">
+            <h2 className="text-2xl font-bold text-white tracking-tight">
+              Preguntas Frecuentes sobre Servicio Técnico en Bello
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">¿Recogen a domicilio en Niquía y Cabañas?</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Sí, cubrimos Niquía, Cabañas, Navarra, Parque de Bello, Alcalá y sectores aledaños con recogida y entrega segura.
+                </p>
+              </div>
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">¿Destapan inyectores Epson y resetean almohadillas?</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Especialistas en limpieza ultrasónica para Epson EcoTank y reset EEPROM oficial para eliminar el bloqueo de almohadillas.
+                </p>
+              </div>
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">¿Cuánto tarda el diagnóstico técnico?</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Entre 4 y 24 horas hábiles. Si apruebas la reparación, el costo del diagnóstico se abona al valor total del servicio.
+                </p>
+              </div>
+            </div>
           </div>
 
         </section>

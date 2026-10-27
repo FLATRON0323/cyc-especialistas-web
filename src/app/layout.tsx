@@ -25,12 +25,29 @@ export const metadata: Metadata = {
   title: "Mantenimiento de Impresoras y Computadores en Medellín, Bello y Envigado | C&C Especialistas",
   description: "Servicio técnico especializado en mantenimiento y reparación de impresoras Epson, Canon, HP, Brother y Kyocera, y computadores en Medellín, Bello, Envigado y todo el Valle de Aburrá. Atención en taller y a domicilio para empresas. WhatsApp +57 305 456 8996.",
   keywords: "reparación de impresoras Medellín, mantenimiento de computadores Bello, servicio técnico impresoras Envigado, destape cabezales Epson, reset almohadillas, repotenciación SSD RAM",
+  authors: [{ name: SITE_CONFIG.name, url: SITE_CONFIG.domainUrl }],
+  creator: SITE_CONFIG.name,
+  publisher: SITE_CONFIG.legalName,
+  category: "Technology",
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     canonical: SITE_CONFIG.domainUrl,
+  },
+  other: {
+    "geo.region": "CO-ANT",
+    "geo.placename": "Medellín, Antioquia, Colombia",
+    "geo.position": `${SITE_CONFIG.geo.latitude};${SITE_CONFIG.geo.longitude}`,
+    "ICBM": `${SITE_CONFIG.geo.latitude}, ${SITE_CONFIG.geo.longitude}`,
   },
   openGraph: {
     title: "C&C Especialistas en Impresión y Computadores | Medellín, Bello y Valle de Aburrá",
@@ -64,12 +81,23 @@ export default function RootLayout({
   const jsonLd = [
     {
       "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": `${SITE_CONFIG.domainUrl}/#website`,
+      "name": SITE_CONFIG.name,
+      "alternateName": "C&C Especialistas",
+      "url": SITE_CONFIG.domainUrl,
+      "inLanguage": "es-CO",
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "ComputerStore",
       "@id": `${SITE_CONFIG.domainUrl}/#localbusiness`,
       "name": SITE_CONFIG.name,
       "url": SITE_CONFIG.domainUrl,
       "image": `${SITE_CONFIG.domainUrl}/logo.png`,
       "telephone": `+${SITE_CONFIG.phoneRaw}`,
+      "currenciesAccepted": "COP",
+      "paymentAccepted": "Efectivo, Transferencia Bancaria, Nequi, Bancolombia",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",

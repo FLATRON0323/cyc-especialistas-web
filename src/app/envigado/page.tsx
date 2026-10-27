@@ -19,30 +19,79 @@ export const metadata: Metadata = {
 };
 
 export default function EnvigadoPage() {
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": SITE_CONFIG.domainUrl,
+  const schemasJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": SITE_CONFIG.domainUrl,
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mantenimiento en Envigado",
+          "item": `${SITE_CONFIG.domainUrl}/envigado`,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Mantenimiento de Impresoras Láser y Computadores en Envigado",
+      "serviceType": "Soporte Técnico Corporativo y Domiciliario",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": SITE_CONFIG.name,
+        "telephone": `+${SITE_CONFIG.phoneRaw}`,
+        "url": SITE_CONFIG.domainUrl,
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Mantenimiento en Envigado",
-        "item": `${SITE_CONFIG.domainUrl}/envigado`,
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Envigado, Antioquia",
       },
-    ],
-  };
+      "description": "Mantenimiento preventivo y correctivo para impresoras láser HP, Kyocera, Brother y portátiles para empresas y consultorios en Envigado.",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Prestan servicio a empresas y notarías en Envigado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, atendemos empresas, centros médicos y despachos en Zúñiga, Jardines, Otraparte, Alcalá y Parque de Envigado con soporte técnico presencial y recogida programada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Reparan impresoras láser HP, Brother y Kyocera de alto volumen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Especialistas en cambio de filminas, rodillos fusores, rodillos de tracción y mantenimiento de unidades de imagen para entornos corporativos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Expiden factura electrónica y garantía por escrito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Todos nuestros servicios cuentan con informe técnico detallado, factura electrónica legal y garantía directa de 3 a 6 meses según el repuesto instalado."
+          }
+        }
+      ]
+    }
+  ];
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemasJsonLd) }}
       />
       <Navbar />
       <main className="min-h-screen bg-slate-950 text-slate-100">
@@ -144,6 +193,33 @@ export default function EnvigadoPage() {
             >
               Agendar Visita por WhatsApp
             </a>
+          </div>
+
+          {/* Preguntas Frecuentes Locales en Envigado */}
+          <div className="border-t border-slate-800 pt-12 space-y-6">
+            <h2 className="text-2xl font-bold text-white tracking-tight">
+              Preguntas Frecuentes sobre Servicio Técnico en Envigado
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">¿Atienden empresas en Zúñiga y Jardines?</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Sí, realizamos visitas técnicas programadas para empresas, consultorios y colegios en todo Envigado y El Poblado.
+                </p>
+              </div>
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">¿Reparan impresoras láser HP y Kyocera?</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Expertos en cambio de unidades fusoras, rodillos de tracción y mantenimiento preventivo de alta exigencia corporativa.
+                </p>
+              </div>
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">¿Ofrecen garantía y factura electrónica?</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Entregamos informe técnico digital, factura electrónica Dian y garantía directa por escrito de 3 a 6 meses.
+                </p>
+              </div>
+            </div>
           </div>
 
         </section>
