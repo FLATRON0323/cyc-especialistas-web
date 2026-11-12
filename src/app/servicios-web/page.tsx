@@ -14,18 +14,21 @@ import {
   Wrench,
   ArrowRight,
   ExternalLink,
+  Code2,
 } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "Diseño Web Medellín, Páginas Web, Redes Sociales y Posicionamiento SEO | C&C Software Studio",
+  title: "Diseño Web Medellín, Software Personalizado, Redes Sociales y SEO | C&C Software Studio",
   description:
-    "C&C Software Studio (C&C Especialistas): creación de páginas web Medellín, diseño web Medellín, gestión de redes sociales Medellín, posicionamiento SEO Medellín y GEO para empresas del Valle de Aburrá.",
+    "C&C Software Studio (C&C Especialistas): creación de páginas web Medellín, diseño web Medellín, software personalizado para diversos rubros, gestión de redes sociales Medellín y posicionamiento SEO Medellín.",
   keywords: [
     "diseño web Medellín",
     "creación de páginas web Medellín",
     "posicionamiento SEO Medellín",
     "gestión de redes sociales Medellín",
+    "software personalizado Medellín",
+    "personalización de software para empresas",
     "posicionamiento GEO",
     "Google Business Profile Medellín",
     "C&C Software Studio",
@@ -71,8 +74,8 @@ export default function ServiciosWebPage() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "C&C Software Studio — Diseño Web, Redes Sociales y Posicionamiento SEO y GEO en Medellín",
-      "serviceType": "Diseño Web, Gestión de Redes Sociales, Posicionamiento SEO y GEO, Google Business Profile y Exposición de Marca",
+      "name": "C&C Software Studio — Diseño Web, Software Personalizado, Redes Sociales y Posicionamiento SEO y GEO en Medellín",
+      "serviceType": "Diseño Web, Software Personalizado para Diversos Rubros, Gestión de Redes Sociales, Posicionamiento SEO y GEO, Google Business Profile y Exposición de Marca",
       "url": `${SITE_CONFIG.domainUrl}/servicios-web`,
       "provider": {
         "@type": "LocalBusiness",
@@ -90,7 +93,7 @@ export default function ServiciosWebPage() {
       },
       "areaServed": SITE_CONFIG.coverage,
       "description":
-        "Creación y personalización de páginas web, creación y gestión de redes sociales, posicionamiento SEO y GEO (Google, ChatGPT, Perplexity, Gemini), fichas de Google Business Profile y directorios, y exposición de marca para empresas, negocios y emprendimientos de Medellín y el Valle de Aburrá.",
+        "Creación y personalización de páginas web, desarrollo y personalización de software a la medida para diversos rubros, creación y gestión de redes sociales, posicionamiento SEO y GEO (Google, ChatGPT, Perplexity, Gemini), fichas de Google Business Profile y directorios, y exposición de marca para empresas, negocios y emprendimientos de Medellín y el Valle de Aburrá.",
     },
   ];
 
@@ -135,6 +138,14 @@ export default function ServiciosWebPage() {
       icon: Megaphone,
       accent: "text-amber-400 bg-amber-500/10",
     },
+    {
+      number: "06",
+      title: "Software personalizado para diversos rubros",
+      description:
+        "Desarrollo a la medida y personalización de software de gestión, inventarios, órdenes de servicio, reservas o flujos internos adaptado a las necesidades de cada sector.",
+      icon: Code2,
+      accent: "text-indigo-400 bg-indigo-500/10",
+    },
   ];
 
   return (
@@ -157,9 +168,9 @@ export default function ServiciosWebPage() {
             </h1>
 
             <p className="text-slate-300 text-base md:text-lg max-w-3xl leading-relaxed">
-              <b>C&amp;C Software Studio</b> es la línea de servicios web de{" "}
+              <b>C&amp;C Software Studio</b> es la línea de servicios web y software a la medida de{" "}
               <b>C&amp;C Especialistas</b>, respaldada por más de{" "}
-              <b>18+ años de experiencia técnica</b> ayudando a negocios reales a crecer con tecnología práctica, presencia digital sólida y visibilidad en buscadores e inteligencia artificial.
+              <b>18+ años de experiencia técnica</b> ayudando a negocios reales de diversos rubros a crecer con tecnología práctica, software personalizado, presencia digital sólida y visibilidad en buscadores e inteligencia artificial.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
@@ -175,7 +186,7 @@ export default function ServiciosWebPage() {
                 href="#servicios-studio"
                 className="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-6 py-4 rounded-xl border border-slate-700 transition"
               >
-                Ver los 5 servicios
+                Ver los servicios
               </a>
             </div>
           </div>
