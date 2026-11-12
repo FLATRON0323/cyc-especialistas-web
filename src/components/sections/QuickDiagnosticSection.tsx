@@ -37,7 +37,7 @@ export default function QuickDiagnosticSection() {
     computador: "Computador o Portátil"
   };
 
-  const whatsappMessage = `Hola C&C Especialistas, usé el cotizador web:%0A- Equipo: ${deviceNames[device]}%0A- Síntoma: ${selectedIssueData.label}%0A- Municipio: ${location}%0ADeseo agendar la revisión técnica ($40.000 COP).`;
+  const whatsappMessage = `Hola C&C Especialistas, usé el cotizador web:%0A- Equipo: ${deviceNames[device]}%0A- Síntoma: ${selectedIssueData.label}%0A- Municipio: ${location}%0ADeseo confirmar el precio final tras el diagnóstico (desde $40.000 COP en taller).`;
 
   return (
     <section id="cotizador" className="py-24 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-white relative overflow-hidden border-t border-slate-800">
@@ -146,7 +146,7 @@ export default function QuickDiagnosticSection() {
               </p>
               <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-400">
                 <span>⏱️ <b>Tiempo estimado:</b> {selectedIssueData.time}</span>
-                <span>💵 <b>Revisión técnica en taller:</b> $40.000 COP</span>
+                <span>💵 <b>Diagnóstico en taller:</b> desde $40.000 en taller (domicilio $90.000–$120.000 según equipo y ubicación; precio final por WhatsApp)</span>
                 <span>🛡️ <b>Garantía:</b> Escrita de servicio</span>
               </div>
             </div>

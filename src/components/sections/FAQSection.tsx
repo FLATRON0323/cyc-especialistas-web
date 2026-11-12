@@ -23,7 +23,7 @@ export default function FAQSection() {
     },
     {
       question: "¿Cuánto cuesta el diagnóstico técnico de mi impresora o computador?",
-      answer: "La revisión y diagnóstico detallado en nuestro local físico tiene un costo base de $40.000 COP. En este proceso, un técnico certificado desarma el equipo, detecta la falla física o de firmware y te entrega una cotización formal. Si apruebas la reparación, el costo del diagnóstico se abona al valor final del servicio técnico."
+      answer: "El diagnóstico y servicio básico en taller inicia desde $40.000 en taller en nuestra sede de Santa Cruz. El servicio a domicilio es de $90.000–$120.000 según la complejidad, tipo y condición del equipo, proceso requerido y ubicación. El precio final se confirma por WhatsApp tras el diagnóstico."
     },
     {
       question: "¿Qué marcas de impresoras reparan y qué garantía ofrecen?",

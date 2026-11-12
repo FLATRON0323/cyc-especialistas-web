@@ -193,7 +193,7 @@ export default function RootLayout({
             "itemOffered": {
               "@type": "Service",
               "name": "Revisión y Diagnóstico Técnico en Taller",
-              "description": "Desarme técnico y diagnóstico detallado de impresoras y computadores en sede física Santa Cruz."
+              "description": "Diagnóstico y servicio básico de arranque desde $40.000 COP en taller (Santa Cruz, Medellín). Servicio a domicilio entre $90.000 y $120.000 COP según complejidad, equipo y ubicación. Precio final confirmado por WhatsApp."
             },
             "price": "40000",
             "priceCurrency": "COP"
@@ -212,30 +212,6 @@ export default function RootLayout({
               "@type": "Service",
               "name": "Reseteo y Cambio Físico de Almohadillas",
               "description": "Solución al error de almohadillas al final de su vida útil con firmware oficial y cambio de esponjas."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Tintas Originales y Certificadas Epson, Canon, HP y Brother",
-              "description": "Botellas de tinta original y genérica premium serie 504, 544, 664, GI-190, GT51/GT53 y BTD60 con entrega en Medellín y Valle de Aburrá."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Cartuchos de Tóner Láser HP, Brother y Kyocera",
-              "description": "Tóner de alto rendimiento para impresoras monocromáticas y color empresariales con garantía de impresión."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Product",
-              "name": "Repuestos Originales de Impresoras (Cabezales, Rodillos y Fusores)",
-              "description": "Venta e instalación de cabezales nuevos, almohadillas con chip, rodillos de arrastre y filminas de teflón."
             }
           },
           {

@@ -95,6 +95,36 @@ export default function ServiciosWebPage() {
       "description":
         "Creación y personalización de páginas web, desarrollo y personalización de software a la medida para diversos rubros, creación y gestión de redes sociales, posicionamiento SEO y GEO (Google, ChatGPT, Perplexity, Gemini), fichas de Google Business Profile y directorios, y exposición de marca para empresas, negocios y emprendimientos de Medellín y el Valle de Aburrá.",
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye el servicio de diseño web y SEO de C&C Software Studio en Medellín?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Incluye creación y personalización de páginas web, gestión de redes sociales, posicionamiento SEO en Google y GEO para buscadores de IA (ChatGPT, Perplexity, Gemini), optimización de Google Business Profile, exposición de marca y desarrollo o personalización de software para diversos rubros."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se cotiza una página web, redes sociales o software personalizado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cada proyecto se cotiza de forma personalizada según los objetivos y alcance de tu negocio. Escríbenos por WhatsApp al 305 456 8996 para recibir tu cotización."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Para qué tipo de negocios trabajan en Medellín y el Valle de Aburrá?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trabajamos con empresas, negocios locales y emprendimientos de Medellín, Bello, Envigado, Itagüí, Sabaneta, Copacabana, La Estrella, Caldas y el Valle de Aburrá."
+          }
+        }
+      ]
+    },
   ];
 
   const services = [
@@ -277,6 +307,39 @@ export default function ServiciosWebPage() {
             >
               <Phone size={18} /> Pide tu cotización por WhatsApp
             </a>
+          </div>
+
+          {/* Preguntas Frecuentes */}
+          <div className="border-t border-slate-800 pt-12 space-y-6">
+            <h2 className="text-2xl font-bold text-white tracking-tight">
+              Preguntas Frecuentes sobre Servicios Web, SEO y Software
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">
+                  ¿Qué incluye el servicio de diseño web y SEO en Medellín?
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Creación y personalización de páginas web, gestión de redes sociales, posicionamiento SEO y GEO, fichas de Google Business Profile, exposición de marca y software personalizado para diversos rubros.
+                </p>
+              </div>
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">
+                  ¿Cómo solicito una cotización para mi empresa?
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Escríbenos directamente por WhatsApp al 305 456 8996 contándonos qué necesita tu negocio para preparar una propuesta a la medida.
+                </p>
+              </div>
+              <div className="bg-slate-900 border border-slate-800/80 p-6 rounded-2xl space-y-2">
+                <h3 className="font-semibold text-white text-base">
+                  ¿Atienden emprendimientos y empresas del Valle de Aburrá?
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Sí, acompañamos empresas, comercios y emprendimientos en Medellín, Bello, Envigado, Itagüí, Sabaneta y todo el Valle de Aburrá.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Enlaces internos a páginas de reparación */}

@@ -13,10 +13,10 @@ export default function CoverageSection() {
       isExternal: true,
       buttonText: "Ver Sede en Google Maps",
       services: [
-        "Revisión y diagnóstico en taller ($40.000)",
+        "Diagnóstico y servicio básico en taller (desde $40.000)",
+        "Servicio a domicilio ($90.000–$120.000 según equipo y zona)",
         "Destape ultrasónico de cabezales Epson y Canon",
         "Mantenimiento de fusores láser HP y Brother",
-        "Repotenciación de PC y laptops con SSD y RAM",
       ]
     },
     {

@@ -1,4 +1,4 @@
-import { ShoppingCart, HardDrive, Cpu, Printer, Wrench, ShieldCheck, Truck, Sparkles } from "lucide-react";
+import { ShoppingCart, ShieldCheck, Truck, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { SITE_CONFIG } from "@/config/site";
 
@@ -8,65 +8,65 @@ export default function ProductsSection() {
       title: "Tintas Originales y Premium",
       subtitle: "Epson 544, 504, 664 | Canon GI-190 | HP GT53 | Brother",
       badge: "Más Vendido",
-      img: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=400&q=80",
-      msg: "Hola, quiero cotizar tintas para mi impresora (indicar modelo)",
-      type: "img",
+      img: "/images/01-tintas-originales-premium.webp",
+      alt: "Botellas de tinta original y premium Epson, Canon, HP y Brother",
+      msg: "Hola, quiero cotizar tintas para mi impresora (indicar marca y modelo)",
     },
     {
       title: "Cartuchos de Tóner Láser",
       subtitle: "HP 85A, 83A, 58A, 105A | Brother TN1060, TN2370 | Kyocera",
       badge: "Empresarial",
-      icon: <Printer size={70} className="text-brand-blue opacity-70" />,
-      msg: "Hola, quiero cotizar tóner láser para mi impresora",
-      type: "icon",
+      img: "/images/02-cartuchos-toner-laser.webp",
+      alt: "Cartuchos de tóner láser HP, Brother y Kyocera",
+      msg: "Hola, quiero cotizar tóner láser para mi impresora (indicar marca y modelo)",
     },
     {
       title: "Cabezales de Impresión Nuevos",
       subtitle: "Cabezales originales Epson L3110, L3250, L4150, L805 y Canon",
       badge: "Garantía Oficial",
-      icon: <Wrench size={70} className="text-emerald-500 opacity-80" />,
-      msg: "Hola, necesito cotizar un cabezal nuevo para mi impresora",
-      type: "icon",
+      img: "/images/03-cabezales-impresion-nuevos.webp",
+      alt: "Cabezales de impresión nuevos para impresoras Epson y Canon",
+      msg: "Hola, necesito cotizar un cabezal nuevo para mi impresora (indicar marca y modelo)",
     },
     {
       title: "Cajas de Almohadillas y Chips",
       subtitle: "Tanques de mantenimiento y chips de reseteo para Epson y Canon",
       badge: "Stock Inmediato",
-      icon: <ShieldCheck size={70} className="text-purple-500 opacity-80" />,
-      msg: "Hola, necesito almohadillas o chip de reseteo para Epson",
-      type: "icon",
+      img: "/images/04-cajas-almohadillas-chips.webp",
+      alt: "Cajas de mantenimiento con almohadillas y chips de reseteo para impresoras",
+      msg: "Hola, necesito almohadillas o chip de reseteo para Epson (indicar modelo)",
     },
     {
       title: "Discos Sólidos SSD (NVMe y SATA)",
       subtitle: "Kingston, Crucial, Lexar 240GB, 480GB, 1TB con instalación",
       badge: "Velocidad 10x",
-      icon: <HardDrive size={70} className="text-brand-blue opacity-70" />,
+      img: "/images/05-discos-solidos-ssd.webp",
+      alt: "Discos de estado sólido SSD NVMe M.2 y SATA",
       msg: "Hola, quiero repotenciar mi computador con disco sólido SSD",
-      type: "icon",
     },
     {
       title: "Memorias RAM DDR4 y DDR5",
       subtitle: "Módulos de 8GB y 16GB para portátiles y computadores de escritorio",
       badge: "Rendimiento",
-      icon: <Cpu size={70} className="text-brand-blue opacity-70" />,
+      img: "/images/06-memorias-ram.webp",
+      alt: "Módulos de memoria RAM DDR4 y DDR5 para portátil y computador de escritorio",
       msg: "Hola, quiero cotizar memoria RAM para mi portátil o PC",
-      type: "icon",
     },
     {
       title: "Unidades Fusoras y Filminas",
       subtitle: "Rodillos fusores, filminas térmicas y pickup roller para HP y Brother",
       badge: "Repuesto Crítico",
-      icon: <Wrench size={70} className="text-amber-500 opacity-80" />,
-      msg: "Hola, necesito repuestos de fusor o rodillos de papel",
-      type: "icon",
+      img: "/images/07-unidades-fusoras-filminas.webp",
+      alt: "Unidad fusora y filmina térmica para impresoras láser HP y Brother",
+      msg: "Hola, necesito repuestos de fusor o rodillos de papel (indicar marca y modelo)",
     },
     {
       title: "Computadores Nuevos y Usados",
       subtitle: "Laptops y computadores All-in-One repotenciados con garantía",
       badge: "Garantizados",
-      img: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=400&q=80",
+      img: "/images/08-computadores-nuevos-usados.webp",
+      alt: "Portátil y computador de escritorio disponibles en C&C Especialistas",
       msg: "Hola, quiero información sobre computadores disponibles",
-      type: "img",
     },
   ];
 
@@ -114,27 +114,24 @@ export default function ProductsSection() {
 
               {/* Contenedor Visual */}
               <div className="bg-slate-50 rounded-2xl aspect-square mb-5 flex items-center justify-center p-6 overflow-hidden border border-gray-100">
-                {prod.type === "img" ? (
-                  <div className="relative w-full h-full">
-                    <Image 
-                      src={prod.img || ""} 
-                      alt={prod.title} 
-                      fill 
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-contain mix-blend-multiply transform group-hover:scale-105 transition-transform duration-500" 
-                    />
-                  </div>
-                ) : (
-                  <div className="transform group-hover:scale-110 transition-transform duration-500 group-hover:text-brand-blue">
-                    {prod.icon}
-                  </div>
-                )}
+                <div className="relative w-full h-full">
+                  <Image
+                    src={prod.img}
+                    alt={prod.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-contain mix-blend-multiply transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
               </div>
 
               {/* Textos */}
               <div className="flex-grow space-y-1.5">
                 <h3 className="font-extrabold text-slate-900 text-base leading-snug">{prod.title}</h3>
                 <p className="text-slate-500 text-xs leading-relaxed line-clamp-2">{prod.subtitle}</p>
+                <p className="text-brand-blue text-[11px] font-bold pt-1">
+                  Precios según marca y modelo — cotiza por WhatsApp
+                </p>
               </div>
 
               {/* Botón de Cotización */}

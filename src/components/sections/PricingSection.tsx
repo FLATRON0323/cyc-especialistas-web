@@ -3,11 +3,11 @@ import { SITE_CONFIG } from "@/config/site";
 
 export default function PricingSection() {
   const prices = [
-    { service: "Revisión y Diagnóstico en Local", price: "$40.000", action: "Agendar revisión" },
+    { service: "Diagnóstico y Servicio Básico en Taller", price: "Desde $40.000", action: "Agendar revisión en taller" },
+    { service: "Servicio a Domicilio", price: "$90.000–$120.000", action: "Solicitar visita a domicilio" },
     { service: "Mantenimiento Preventivo", price: "Cotizar por WhatsApp", action: "Cotizar preventivo" },
     { service: "Formateo e Instalación de SO", price: "Cotizar por WhatsApp", action: "Cotizar formateo" },
     { service: "Upgrade de Disco Duro a SSD", price: "Cotizar por WhatsApp", action: "Cotizar SSD" },
-    { service: "Servicio a Domicilio", price: "Cotizar por WhatsApp", action: "Solicitar visita" },
   ];
 
   return (
@@ -65,7 +65,7 @@ export default function PricingSection() {
                 </table>
               </div>
               <div className="mt-6 text-xs text-slate-400 font-medium text-center">
-                * Los precios son una guía base y no incluyen el costo de repuestos adicionales de hardware. ¡Cotiza gratis por WhatsApp para un precio exacto para tu modelo!
+                * El diagnóstico en taller inicia desde $40.000 y el domicilio es de $90.000–$120.000 según complejidad, tipo y condición del equipo, proceso y ubicación. El precio final se confirma por WhatsApp tras el diagnóstico.
               </div>
             </div>
           </div>
