@@ -26,15 +26,6 @@ const nextConfig = {
       },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: "/medellin",
-        destination: "/",
-        statusCode: 301,
-      },
-    ];
-  },
   async headers() {
     return [
       {

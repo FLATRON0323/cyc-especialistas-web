@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.name,
     images: [
       {
-        url: "/logo.png",
+        url: "/logo.webp",
         width: 800,
         height: 600,
         alt: "Logo C&C Especialistas",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "C&C Especialistas en Impresión y Computadores",
     description: "Servicio técnico especializado en mantenimiento de impresoras y computadores en Medellín, Bello y Envigado.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
 };
 
@@ -94,7 +94,7 @@ export default function RootLayout({
       "@id": `${SITE_CONFIG.domainUrl}/#localbusiness`,
       "name": SITE_CONFIG.name,
       "url": SITE_CONFIG.domainUrl,
-      "image": `${SITE_CONFIG.domainUrl}/logo.png`,
+      "image": `${SITE_CONFIG.domainUrl}/logo.webp`,
       "telephone": `+${SITE_CONFIG.phoneRaw}`,
       "currenciesAccepted": "COP",
       "paymentAccepted": "Efectivo, Transferencia Bancaria, Nequi, Bancolombia",
@@ -143,8 +143,8 @@ export default function RootLayout({
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "128",
+        "ratingValue": "4.7",
+        "reviewCount": "17",
         "bestRating": "5",
         "worstRating": "1"
       },

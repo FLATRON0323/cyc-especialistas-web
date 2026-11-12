@@ -46,7 +46,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group py-1">
             <div className="relative w-12 h-10 sm:w-16 sm:h-12 flex-shrink-0">
               <Image 
-                src="/logo.png" 
+                src="/logo.webp" 
                 alt="C&C Especialistas en Impresión y Computadores" 
                 fill 
                 priority 

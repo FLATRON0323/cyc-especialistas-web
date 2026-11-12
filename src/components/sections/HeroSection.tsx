@@ -105,7 +105,7 @@ export default function HeroSection() {
             
             <div className="rounded-3xl shadow-2xl overflow-hidden border-8 border-white relative bg-gray-100 group">
               <Image 
-                src="/hero-tecnico-reparacion.jpg" 
+                src="/hero-tecnico-reparacion.webp" 
                 alt="Técnico Especialista Reparando Impresora en Taller C&C" 
                 width={800} 
                 height={600} 

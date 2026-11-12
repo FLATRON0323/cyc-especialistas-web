@@ -4,6 +4,7 @@ import { SITE_CONFIG } from "@/config/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     { path: "", priority: 1.0, changeFrequency: "weekly" as const },
+    { path: "/medellin", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/bello", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/envigado", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/itagui-sabaneta", priority: 0.8, changeFrequency: "monthly" as const },

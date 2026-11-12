@@ -8,6 +8,7 @@ export async function GET() {
 
   const urlList = [
     SITE_CONFIG.domainUrl,
+    `${SITE_CONFIG.domainUrl}/medellin`,
     `${SITE_CONFIG.domainUrl}/bello`,
     `${SITE_CONFIG.domainUrl}/envigado`,
     `${SITE_CONFIG.domainUrl}/itagui-sabaneta`,
