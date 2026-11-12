@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/itagui-sabaneta", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/reset-almohadillas-epson", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/destape-cabezales-impresoras", priority: 0.9, changeFrequency: "weekly" as const },
+    { path: "/servicios-web", priority: 0.85, changeFrequency: "weekly" as const },
   ];
 
   return routes.map((item) => ({

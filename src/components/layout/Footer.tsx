@@ -65,6 +65,12 @@ export default function Footer() {
                   Destape y Lavado de Cabezales
                 </Link>
               </li>
+              <li>
+                <Link href="/servicios-web" className="text-slate-300 hover:text-brand-accent transition flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  Diseño Web y SEO (C&amp;C Software Studio)
+                </Link>
+              </li>
               <li className="pt-2 border-t border-slate-800">
                 <Link href="/#productos" className="text-brand-accent hover:underline flex items-center gap-1">
                   Ver Catálogo de Repuestos y Tintas →

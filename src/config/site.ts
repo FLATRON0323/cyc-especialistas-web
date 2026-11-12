@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: "C&C Especialistas en Impresión y Computadores",
   legalName: "C&C Especialistas SAS",
-  domainUrl: "https://cyc-especialistas-web.vercel.app",
+  domainUrl: "https://cycespecialistas.com",
   phoneRaw: "573054568996",
   phoneFormatted: "+57 305 456 8996",
   phoneDisplay: "305 456 8996",

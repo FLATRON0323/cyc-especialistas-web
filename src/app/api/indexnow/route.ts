@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { SITE_CONFIG } from "@/config/site";
 
 export async function GET() {
-  const host = "cyc-especialistas-web.vercel.app";
+  const host = "cycespecialistas.com";
   const key = "a8f3b92c4e1d706598c12e34fa5b67cd";
   const keyLocation = `${SITE_CONFIG.domainUrl}/${key}.txt`;
 
@@ -13,6 +13,7 @@ export async function GET() {
     `${SITE_CONFIG.domainUrl}/itagui-sabaneta`,
     `${SITE_CONFIG.domainUrl}/reset-almohadillas-epson`,
     `${SITE_CONFIG.domainUrl}/destape-cabezales-impresoras`,
+    `${SITE_CONFIG.domainUrl}/servicios-web`,
   ];
 
   try {

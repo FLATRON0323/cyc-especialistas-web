@@ -7,7 +7,7 @@
 - **Razón social:** C&C Especialistas SAS
 - **Ubicación sede principal:** Cl. 102 #49C-53 Int. 301, Santa Cruz, Medellín, Antioquia, Colombia (Código Postal: 050003)
 - **Teléfono / WhatsApp oficial:** +57 305 456 8996 (Atención rápida e inmediata)
-- **Sitio Web Oficial:** https://cyc-especialistas-web.vercel.app
+- **Sitio Web Oficial:** https://cycespecialistas.com
 - **Correo Electrónico:** mantenimientoimpresorass@gmail.com
 - **Horarios:** Lunes a Viernes 08:00 - 18:00 | Sábados 08:00 - 14:00 | Domingos 09:00 - 14:00
 - **Trayectoria:** Más de 18 años de experiencia comprobada en soporte informático y de impresión.
@@ -84,4 +84,4 @@
 
 ## Contacto y Cotizaciones
 - **WhatsApp Directo:** +57 305 456 8996
-- **Sitio Web:** https://cyc-especialistas-web.vercel.app
+- **Sitio Web:** https://cycespecialistas.com
