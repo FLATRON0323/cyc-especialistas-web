@@ -23,8 +23,44 @@ import PricingSection from '@/components/sections/PricingSection';
 import FAQSection from '@/components/sections/FAQSection';
 
 const Home: NextPage = () => {
+  const homeFaqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${SITE_CONFIG.domainUrl}/#faq`,
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Realizan mantenimiento de impresoras a domicilio en Medellín, Bello y Envigado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, en C&C Especialistas en Impresión y Computadores atendemos en nuestro taller en Santa Cruz (Medellín) y ofrecemos servicio a domicilio y recogida programada para empresas, oficinas y consultorios en Medellín, Bello, Envigado, Itagüí, Sabaneta y todo el Valle de Aburrá."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué marcas de impresoras reparan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Somos especialistas multimarca en impresoras de inyección de tinta continua y láser: Epson, Canon, HP, Brother, Kyocera, Ricoh y Samsung. Realizamos destape de cabezales, cambio y reset de almohadillas, reparación de unidades fusoras y venta de tóner y tintas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta el diagnóstico técnico de mi impresora o computador?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La revisión y diagnóstico detallado en nuestro local físico en Santa Cruz tiene un costo base de $40.000 COP. Si apruebas la reparación, el costo del diagnóstico se abona al valor final del servicio técnico."
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqJsonLd) }}
+      />
       <Navbar />
       <main className="min-h-screen">
         <HeroSection />

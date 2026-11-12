@@ -30,12 +30,12 @@ export default function TestimonialSection() {
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Confianza nacional comprobada</h2>
           <div className="flex items-center justify-center gap-3 mb-6 bg-slate-800/50 w-fit mx-auto px-6 py-2 rounded-full border border-slate-700">
-            <span className="text-2xl text-brand-accent font-black">4.9/5</span>
+            <span className="text-2xl text-brand-accent font-black">4.7/5</span>
             <div className="flex text-brand-accent">
               {[1,2,3,4,5].map(i => <Star key={i} size={20} fill="currentColor" />)}
             </div>
           </div>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">Basado en cientos de reseñas de empresas en nuestra trayectoria técnica a nivel nacional.</p>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">Basado en 17 reseñas verificadas en Google Business Profile y nuestra trayectoria técnica.</p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">

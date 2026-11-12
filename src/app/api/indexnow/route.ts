@@ -12,8 +12,17 @@ export async function GET() {
     `${SITE_CONFIG.domainUrl}/bello`,
     `${SITE_CONFIG.domainUrl}/envigado`,
     `${SITE_CONFIG.domainUrl}/itagui-sabaneta`,
+    `${SITE_CONFIG.domainUrl}/copacabana`,
+    `${SITE_CONFIG.domainUrl}/caldas`,
+    `${SITE_CONFIG.domainUrl}/rionegro`,
+    `${SITE_CONFIG.domainUrl}/girardota`,
+    `${SITE_CONFIG.domainUrl}/la-estrella`,
+    `${SITE_CONFIG.domainUrl}/sabaneta`,
     `${SITE_CONFIG.domainUrl}/reset-almohadillas-epson`,
     `${SITE_CONFIG.domainUrl}/destape-cabezales-impresoras`,
+    `${SITE_CONFIG.domainUrl}/impresora-no-imprime-color`,
+    `${SITE_CONFIG.domainUrl}/impresora-no-reconoce-cartucho-tinta`,
+    `${SITE_CONFIG.domainUrl}/impresora-laser-imprime-manchas-rayas`,
     `${SITE_CONFIG.domainUrl}/servicios-web`,
   ];
 
